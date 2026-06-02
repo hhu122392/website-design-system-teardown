@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  把任意网站拆解成中英双语 DESIGN.md、浏览器验收过的 Preview HTML，以及可复用的 Codex 案例库。
+  把任意网站拆解成中英双语 DESIGN.md、浏览器验收过的 Preview HTML，以及可复用的 Codex 案例。
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 把一个网站 URL 发给 Codex，让它使用这套 Skill，就能得到一套可交付的设计系统拆解包。后续其他 AI agent 可以直接读取这套 DESIGN.md，再去生成风格一致的 UI。
 
-这个仓库参考了 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 的对外展示方式：按产品领域收集 DESIGN.md 案例，用简洁条目展示每个网站的视觉系统，并保留足够的视觉证据和实现规则。
+这个仓库参考了 [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) 的对外展示方式：用简洁条目展示 DESIGN.md 案例，说明每个网站的视觉系统，并保留足够的视觉证据和实现规则。
 
 ## 什么是 DESIGN.md？
 
@@ -36,7 +36,7 @@
 
 这套 Skill 会从真实网站拆出中英双语 DESIGN.md，并额外生成一个可在浏览器里检查的 `preview.html`。
 
-## 案例集合
+## 案例
 
 ### Developer Tools & IDEs
 
@@ -55,7 +55,7 @@ Preview:
 | [`preview.html`](cases/developer-tools-ides/bolt-new/design-system-analysis/bolt-new-preview.html) | 可浏览器检查的视觉预览 |
 | [`metadata.md`](cases/developer-tools-ides/bolt-new/metadata.md) | 来源 URL、分类、访问状态、已检查页面和已知缺口 |
 
-## 每次拆解包含什么
+## 这个案例格式包含什么
 
 每个案例都保持同一套结构：
 

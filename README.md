@@ -36,7 +36,7 @@ It sits next to agent-facing project instructions:
 
 This skill creates bilingual DESIGN.md-style files from real websites, then adds a visual preview HTML so the design system can be inspected before reuse.
 
-## Collection
+## Case Study
 
 ### Developer Tools & IDEs
 
@@ -55,7 +55,7 @@ Case files:
 | [`preview.html`](cases/developer-tools-ides/bolt-new/design-system-analysis/bolt-new-preview.html) | Browser-checkable visual catalog |
 | [`metadata.md`](cases/developer-tools-ides/bolt-new/metadata.md) | Source URL, category, access state, observed pages, and known gaps |
 
-## What's Inside Each Teardown
+## What's Inside This Case Format
 
 Every generated case follows the same shape:
 
