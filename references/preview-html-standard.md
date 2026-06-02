@@ -31,6 +31,9 @@ The preview must feel like a real product surface built from the source site's d
 - Do not use generic demo styling that conflicts with the analyzed site.
 - Do not use placeholder icons or fake logo tiles. Forbidden substitutes include emoji icons, single-letter tiles, generic initials such as `D`, `X`, `P`, `M`, `DB`, `SS`, `AU`, abstract colored squares, or “icon placeholder” blocks. Use observed source-site icons, inline SVG paths extracted from the source page, or omit the icon.
 - Do not use placeholder images, gray boxes, gradient boxes, or invented mock screenshots when public source images or product UI assets are available.
+- Do not use a real source asset in the wrong role. A card photo, article thumbnail, hero image, or product screenshot is not an acceptable replacement for a top-nav icon, tab icon, social icon, integration icon, or tool icon.
+- Do not invent device frames, phone shells, browser chrome, fake product screenshots, or mock app windows unless the source site visibly uses that exact type of frame. Responsive behavior should be demonstrated by real components collapsing, stacking, resizing, or becoming swipeable.
+- Do not hard-code active nav/tab states when links can change the current section. Selected underlines, active pills, and `aria-current` values must match the current hash and update after click.
 
 ## Source Asset Rules
 
@@ -42,6 +45,7 @@ During site inspection, collect visual assets that define the system:
 - CSS mask icons from computed styles
 - social icons and integration icons
 - product screenshots, feature images, UI mockups, brand cards, partner marks
+- top navigation and product-mode tab assets, including image posters used by videos or animated icons
 
 Use them in the preview when they make the page more faithful. Acceptable approaches:
 
@@ -50,6 +54,14 @@ Use them in the preview when they make the page more faithful. Acceptable approa
 - `<img>` using public source product/feature/brand assets
 
 After using source assets, browser-check that they load. If an asset fails, replace it with another observed public asset or record the failure in Known Gaps.
+
+Asset role matching:
+
+- Brand mark -> observed logo, wordmark, favicon, or inline SVG.
+- Product-mode or top-nav icon -> observed nav/tab icon asset from that same nav/tab component.
+- Social or integration icon -> observed social/integration SVG, image, CSS mask, or faithful inline vector.
+- Content card media -> observed content-card media only inside content cards, galleries, heroes, or media tiles.
+- Responsive examples -> the same observed components in a narrower layout, not a fabricated device screenshot.
 
 ## Required Page Structure
 
@@ -60,6 +72,7 @@ The preview must include these blocks, in this order:
    - A brand/title mark or source-backed logo/icon treatment.
    - Anchor links: `Colors`, `Typography`, `Components`, `Responsive`.
    - A primary CTA using the site's primary button style.
+   - If the nav has product-mode tabs or selected states, direct links such as `#components`, `#experiences`, or `#services` must show the correct active item. A user click must update the active item.
 
 2. Hero system sample
    - A headline that demonstrates the observed display style.
@@ -96,6 +109,7 @@ The preview must include these blocks, in this order:
 8. Responsive behavior
    - Demonstrate the grid collapse, nav collapse, touch targets, and mobile spacing rules.
    - Include a short text note describing the main breakpoint behavior.
+   - Use real preview components at mobile size. Do not wrap them in an invented phone shell or fake browser frame unless the source site itself uses that visual device.
 
 9. Known gaps
    - Mirror the important uncertainty from the Markdown documents.
@@ -166,8 +180,12 @@ Verification checks:
 - Mobile width around 390px has no horizontal overflow.
 - Nav collapses or adapts on mobile.
 - Source images/icons load when used; failed image count should be zero.
+- Source assets are used in the correct role; nav icons are not replaced by content images.
 - At least 6 component sections are present when evidence supports them.
 - Placeholder icon classes or fake one-letter assets are absent.
+- Invented device-frame classes or visuals are absent unless supported by source evidence.
+- Active nav/tab state is tested on a direct hash URL and after at least one real click when the preview includes selected states.
+- Any screenshot or GIF used in README or case documentation is regenerated after the final preview edit.
 - The first viewport visually resembles a polished mini product preview, not a documentation page.
 
 Screenshot checks are useful but not the only proof. If screenshot capture times out, still run DOM/layout/image-load checks and report that screenshot capture failed.

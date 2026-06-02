@@ -32,6 +32,7 @@ Read these only when this skill is used:
    - nav, button, card, form, tab, chip, hero, footer, and signature components
    - enough domain-specific UI patterns to build a rich preview, not only generic buttons and cards
    - logo, favicon, icon SVGs, CSS mask icons, product images, UI mock images, screenshots, brand tiles, partner marks, and other public visual assets that define the source site's look
+   - component-specific icon assets, especially top navigation, tab, menu, social, integration, and tool icons; do not reuse unrelated content images as icons
    - responsive changes on desktop and mobile when practical
 5. Separate facts from inference. Write "inferred" or "likely" when a rule is inferred from repeated patterns rather than directly measurable.
 6. Write two Markdown documents by default:
@@ -59,6 +60,9 @@ Read these only when this skill is used:
 - Do not invent tokens to make the file look complete. If a value is not observed, omit it or mark it as inferred.
 - Avoid copying large chunks of website text. The output is a design-system analysis, not a content scrape.
 - Never use fake placeholder icons, single-letter logo tiles, emoji, generic colored squares, or labels like `D`, `X`, `P`, `M`, `DB`, `SS`, or `AU` as substitutes for observed icons. Use the source website's public icon asset, an inline SVG extracted from the source page's CSS mask/SVG, or a faithful simple vector matching the observed icon family. If no icon evidence exists, omit the icon instead of inventing one.
+- Match source assets to their original component role. A navigation tab icon must use the observed navigation/tab icon asset, not a listing image, article image, feature image, or any other unrelated source asset.
+- Do not invent device frames, phone shells, browser chrome, product screenshots, or mock app windows unless that kind of frame was observed on the source site. For responsive behavior, show the real components compressed, stacked, or made swipeable instead of putting them inside an artificial device mockup.
+- If the preview has anchor tabs, top-nav modes, toggles, or other visible selected states, the selected state must change correctly on click and on direct hash links. Do not leave a hard-coded `active` underline that contradicts the current URL.
 - The preview must feel like a small product page built from the analyzed system. A page that reads like documentation with only color swatches, type samples, buttons, and simple cards is not acceptable.
 - If screenshots are included, use them as evidence only; the main output must still be a text design system.
 
@@ -87,6 +91,7 @@ Before saying the skill output is ready:
 6. Confirm the preview HTML has a full HTML document, inline CSS variables, responsive CSS, top anchor navigation, color swatches, type samples, source-backed icons/media when observed, and at least 6 representative component sections when enough evidence exists.
 7. Search the preview HTML for placeholders and fake icon patterns before opening it:
    - forbidden output strings/classes include `Replace with`, `placeholder image`, `social-dot`, `tile-logo`, `feature-icon`, and fake one-letter icon text used as a logo.
+   - also search for invented mockup wrappers such as unobserved `phone-frame`, fake browser frames, and unrelated content assets used as icons.
    - a source-backed preview should show real `<svg>`, `<img>`, source-site asset URLs, or inline vector paths for icons/media when the target site uses them.
 8. Open the preview HTML in the Browser plugin and check desktop and mobile widths. If `file://` is blocked, start a local static server in the workspace and open the preview through `http://127.0.0.1:<port>/...`; do not skip browser verification because local file URLs are blocked.
 9. In browser verification, confirm:
@@ -95,6 +100,8 @@ Before saying the skill output is ready:
    - source images/icons load successfully when used
    - component sections are visible
    - mobile nav/grid collapse works
+   - interactive selected states, such as nav tab underlines, match the current hash/URL and update after a real click
    - the preview does not look like a generic documentation page
-10. If screenshots fail because the browser screenshot command times out, still run DOM/layout/image-load checks and say exactly what was and was not verified. Do not claim screenshot verification passed unless it did.
-11. If login assistance was needed, confirm the Known Gaps accurately say which logged-in surfaces were or were not inspected.
+10. After any visual or interaction fix, rerun image-load, overflow, active-state, and mobile checks. Do not reuse an older screenshot or GIF in the README after changing the preview.
+11. If screenshots fail because the browser screenshot command times out, still run DOM/layout/image-load checks and say exactly what was and was not verified. Do not claim screenshot verification passed unless it did.
+12. If login assistance was needed, confirm the Known Gaps accurately say which logged-in surfaces were or were not inspected.
