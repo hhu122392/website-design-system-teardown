@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Design System Teardown"
+  short_description: "Create bilingual DESIGN.md docs, preview HTML, and categorized cases."
+  default_prompt: "Use $website-design-system-teardown to analyze this website, write Chinese and English DESIGN.md-style documents plus preview HTML, and save the case by category when requested."

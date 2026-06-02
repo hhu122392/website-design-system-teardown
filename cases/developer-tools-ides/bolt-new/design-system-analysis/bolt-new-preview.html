@@ -1,0 +1,1045 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bolt.new Design System Preview</title>
+  <style>
+    :root {
+      --primary: #1488FC;
+      --primary-hover: #2BA6FF;
+      --link: #1488FC;
+      --ink: #FFFEFF;
+      --body: #FFFFFFBF;
+      --muted: #FFFFFF99;
+      --canvas: #1E1E21;
+      --canvas-deep: #000000;
+      --surface-card: #1E1E21;
+      --surface-elevated: #111114;
+      --surface-soft: #2C2C30;
+      --surface-chip: #101010;
+      --hairline: #FFFFFF1A;
+      --divider: #FFFFFF26;
+      --on-primary: #F3F0F5;
+      --success: #22C55E;
+      --warning: #F97316;
+      --error: #EF4444;
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 12px;
+      --radius-pill: 9999px;
+      --space-sm: 8px;
+      --space-md: 12px;
+      --space-lg: 18px;
+      --space-xl: 24px;
+      --section: 88px;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-display: "Inter Display", Inter, ui-sans-serif, system-ui, sans-serif;
+      --font-mono: ui-monospace, "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 24px;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container {
+      width: min(1280px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .icon {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      fill: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(30, 30, 33, .92);
+      border-bottom: 1px solid var(--hairline);
+      backdrop-filter: blur(12px);
+    }
+    .nav-inner {
+      min-height: 49px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .brand img {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 22px;
+      color: var(--body);
+      font: 500 14px/20px var(--font-sans);
+    }
+    .nav-links a {
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .source-icon {
+      width: 24px;
+      height: 24px;
+      color: var(--body);
+      display: inline-grid;
+      place-items: center;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+    }
+    .source-icon:hover { color: var(--ink); }
+
+    .btn {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      font: 500 14px/20px var(--font-sans);
+      text-decoration: none;
+      white-space: nowrap;
+      box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    }
+    .btn-sm {
+      min-height: 32px;
+      padding: 0 10px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .btn-primary { background: var(--primary); color: var(--on-primary); }
+    .btn-secondary { background: transparent; color: var(--ink); border-color: var(--hairline); }
+    .btn-pill { border-radius: var(--radius-pill); box-shadow: none; }
+    .btn-send { background: var(--primary-hover); color: #fff; border-radius: var(--radius-pill); }
+    .btn-plan { background: var(--surface-soft); color: var(--muted); border-radius: var(--radius-pill); }
+
+    .hero {
+      position: relative;
+      min-height: 690px;
+      padding: 92px 0 58px;
+      border-bottom: 1px solid var(--hairline);
+      background:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        radial-gradient(circle at 62% 18%, rgba(43,166,255,.2), transparent 32%),
+        radial-gradient(circle at 22% 32%, rgba(20,136,252,.12), transparent 30%),
+        linear-gradient(180deg, #1E1E21 0%, #171719 66%, #111114 100%);
+      background-size: 100% 24px, auto, auto, auto;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.04), transparent);
+      mask-image: linear-gradient(90deg, transparent 8%, #000 42%, #000 58%, transparent 92%);
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, .82fr) minmax(520px, 1.18fr);
+      gap: 56px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 5px 12px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-pill);
+      background: rgba(16,16,16,.72);
+      color: var(--muted);
+      font: 400 12px/16px var(--font-sans);
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 620px;
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-size: 56px;
+      line-height: 56px;
+      font-weight: 700;
+      letter-spacing: -1.4px;
+    }
+    .hero-copy {
+      margin: 18px 0 26px;
+      max-width: 580px;
+      color: var(--body);
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .source-strip {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--muted);
+      font: 400 12px/16px var(--font-sans);
+    }
+    .source-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 28px;
+      padding: 5px 12px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-pill);
+      background: var(--surface-chip);
+      color: var(--body);
+      font: 400 12px/16px var(--font-sans);
+    }
+    .source-chip .icon { width: 16px; height: 16px; }
+
+    .workbench {
+      border: 1px solid var(--hairline);
+      border-radius: 16px;
+      background: rgba(17,17,20,.92);
+      box-shadow: 0 30px 120px rgba(0,0,0,.34);
+      overflow: hidden;
+    }
+    .window-bar {
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 0 14px;
+      border-bottom: 1px solid var(--hairline);
+      background: #151518;
+    }
+    .dots {
+      display: flex;
+      gap: 7px;
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #3B3B40;
+    }
+    .dot.hot { background: var(--primary-hover); }
+    .window-title {
+      color: var(--muted);
+      font: 400 12px/16px var(--font-mono);
+    }
+    .workbench-body {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      min-height: 438px;
+    }
+    .composer-panel {
+      padding: 18px;
+      border-right: 1px solid var(--hairline);
+    }
+    .prompt-box {
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      background: #151518;
+      overflow: hidden;
+    }
+    .prompt-input {
+      height: 116px;
+      padding: 20px;
+      color: var(--ink);
+      font: 400 14px/20px var(--font-sans);
+    }
+    .placeholder { color: var(--muted); }
+    .prompt-toolbar {
+      min-height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px 12px;
+      border-top: 1px solid var(--hairline);
+    }
+    .round-control {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--hairline);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--ink);
+      display: inline-grid;
+      place-items: center;
+    }
+    .toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preview-stack {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+    .response-card {
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.03);
+      padding: 14px;
+    }
+    .response-card h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font: 600 14px/20px var(--font-sans);
+    }
+    .code-lines {
+      display: grid;
+      gap: 7px;
+    }
+    .code-line {
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+    }
+    .code-line.blue { background: rgba(43,166,255,.62); }
+    .agent-panel {
+      padding: 18px;
+      background: #0E0E10;
+    }
+    .agent-card {
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #111114;
+    }
+    .agent-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 24px;
+      padding: 0 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(43,166,255,.13);
+      color: var(--primary-hover);
+      font: 500 12px/16px var(--font-sans);
+    }
+    .agent-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .agent-cell {
+      min-height: 72px;
+      padding: 13px 14px;
+      border-right: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .agent-cell:nth-child(2n) { border-right: 0; }
+    .agent-label { color: var(--muted); font: 400 12px/16px var(--font-sans); }
+    .agent-value { margin-top: 4px; color: var(--ink); font: 600 15px/22px var(--font-sans); }
+    .stat-row {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .stat {
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      padding: 12px;
+      background: rgba(255,255,255,.03);
+    }
+    .stat b {
+      display: block;
+      color: var(--ink);
+      font: 700 26px/30px var(--font-sans);
+      letter-spacing: -1px;
+    }
+    .stat span {
+      color: var(--muted);
+      font: 400 11px/15px var(--font-sans);
+    }
+
+    .section {
+      padding: var(--section) 0;
+      border-bottom: 1px solid var(--hairline);
+      background: var(--canvas);
+    }
+    .section.deep { background: var(--surface-elevated); }
+    .section.black { background: var(--canvas-deep); }
+    .section-label {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font: 600 12px/16px var(--font-mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .section h2 {
+      margin: 0;
+      max-width: 900px;
+      color: var(--ink);
+      font: 500 52px/62.4px var(--font-sans);
+      letter-spacing: -1px;
+    }
+    .section-intro {
+      margin: 16px 0 34px;
+      max-width: 760px;
+      color: var(--body);
+      font: 400 16px/25.6px var(--font-sans);
+    }
+
+    .grid-4, .grid-3, .grid-2 { display: grid; gap: 16px; }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .swatch {
+      min-height: 146px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--surface-card);
+    }
+    .swatch-color {
+      height: 74px;
+      border-bottom: 1px solid var(--hairline);
+      background: var(--primary);
+    }
+    .swatch-meta {
+      padding: 12px;
+      color: var(--body);
+      font: 400 12px/18px var(--font-mono);
+    }
+    .type-card, .component-card, .known-card {
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      background: var(--surface-card);
+      padding: 18px;
+    }
+    .type-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font: 600 14px/20px var(--font-sans);
+    }
+    .type-card p { margin: 0; color: var(--body); }
+    .display-sample { font: 700 48px/48px var(--font-display); letter-spacing: -1.2px; color: var(--ink); }
+    .enterprise-sample { font: 500 66px/72.6px var(--font-sans); color: var(--ink); }
+    .heading-sample { font: 500 52px/62.4px var(--font-sans); letter-spacing: -1px; color: var(--ink); }
+    .body-sample { font: 400 16px/24px var(--font-sans); color: var(--body); }
+    .mono-sample { font: 400 13px/20px var(--font-mono); color: var(--body); }
+
+    .component-section { margin-top: 32px; }
+    .component-heading { margin: 0 0 10px; color: var(--ink); font: 600 20px/28px var(--font-display); }
+    .component-copy { margin: 0 0 16px; color: var(--body); max-width: 820px; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .disabled { opacity: .5; }
+
+    .asset-rail {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .brand-card {
+      position: relative;
+      min-height: 230px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: #111114;
+    }
+    .brand-card > img.bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .9;
+      filter: saturate(.95);
+    }
+    .brand-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.56));
+    }
+    .brand-meta {
+      position: absolute;
+      z-index: 1;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-meta img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.88);
+      padding: 4px;
+    }
+    .brand-title { color: #fff; font: 600 14px/20px var(--font-sans); }
+    .brand-sub { color: var(--body); font: 400 12px/16px var(--font-sans); }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      min-height: 318px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-xl);
+      background: var(--surface-card);
+      overflow: hidden;
+    }
+    .feature-media {
+      position: relative;
+      min-height: 190px;
+      background: #0E0E10;
+      overflow: hidden;
+    }
+    .feature-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 190px;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .feature-body {
+      padding: 16px;
+    }
+    .feature-title {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font: 600 18px/28px var(--font-display);
+    }
+    .feature-text {
+      margin: 0;
+      color: var(--muted);
+      font: 400 13px/19px var(--font-sans);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .pricing-card {
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      background: var(--surface-card);
+    }
+    .plan-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .plan-name { margin: 0; color: var(--ink); font: 600 20px/28px var(--font-sans); }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 0 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(43,166,255,.13);
+      color: var(--primary-hover);
+      font: 600 11px/16px var(--font-sans);
+    }
+    .price { color: var(--ink); font: 600 32px/40px var(--font-sans); letter-spacing: -1px; }
+    .price span { color: var(--muted); font: 400 13px/18px var(--font-sans); letter-spacing: 0; }
+    .feature-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: var(--body);
+      font: 400 13px/19px var(--font-sans);
+    }
+    .feature-list li {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      gap: 8px;
+    }
+    .check { color: var(--success); }
+
+    .enterprise-form {
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-xl);
+      background:
+        radial-gradient(circle at 82% 18%, rgba(43,166,255,.16), transparent 28%),
+        #0B0B0C;
+      padding: 24px;
+    }
+    .form-row {
+      max-width: 560px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      border: 1px solid rgba(255,255,255,.34);
+      background: #111114;
+    }
+    .email-input {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+      color: var(--muted);
+      font: 400 15px/22.5px var(--font-sans);
+    }
+    .submit-pixel {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 24px;
+      border-left: 1px solid rgba(255,255,255,.28);
+      border-radius: 0 2px 2px 0;
+      background: #0F6FD0;
+      color: #fff;
+      font: 600 16px/24px var(--font-sans);
+    }
+
+    .surface-demo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .surface-band {
+      min-height: 230px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-xl);
+      padding: 20px;
+    }
+    .surface-band h3 { margin: 0 0 10px; color: var(--ink); }
+    .surface-band p { margin: 0; color: var(--body); }
+
+    .responsive-demo {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .phone {
+      max-width: 330px;
+      border: 1px solid var(--hairline);
+      border-radius: 24px;
+      padding: 14px;
+      background: #0C0C0E;
+    }
+    .phone-nav {
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .phone-title {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font: 700 32px/34px var(--font-display);
+      letter-spacing: -1px;
+    }
+    .phone-card {
+      margin-top: 12px;
+      padding: 14px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg);
+      background: var(--surface-card);
+    }
+    .known-card ul { margin: 0; padding-left: 18px; color: var(--body); }
+    .known-card li + li { margin-top: 8px; }
+
+    @media (max-width: 1040px) {
+      .hero-grid, .workbench-body, .grid-4, .grid-3, .grid-2,
+      .pricing-grid, .feature-grid, .surface-demo, .responsive-demo {
+        grid-template-columns: 1fr;
+      }
+      .composer-panel { border-right: 0; border-bottom: 1px solid var(--hairline); }
+      .asset-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav-links { display: none; }
+      .nav-actions .btn { display: none; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 32px, 390px); }
+      .hero { min-height: auto; padding: 80px 0 48px; }
+      .hero h1 { font-size: 48px; line-height: 48px; letter-spacing: -1.2px; }
+      .hero-grid { gap: 30px; }
+      .workbench { border-radius: 12px; }
+      .agent-grid, .stat-row { grid-template-columns: 1fr; }
+      .agent-cell, .agent-cell:nth-child(2n) { border-right: 0; }
+      .section { padding: 56px 0; }
+      .section h2 { font-size: 30px; line-height: 36px; letter-spacing: 0; }
+      .enterprise-sample { font-size: 42px; line-height: 48px; }
+      .heading-sample, .display-sample { font-size: 36px; line-height: 40px; }
+      .asset-rail {
+        display: flex;
+        overflow-x: auto;
+        padding-bottom: 6px;
+      }
+      .brand-card { flex: 0 0 230px; }
+      .btn-plan span { display: none; }
+      .btn-send span { display: none; }
+      .btn-send { width: 48px; padding: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .submit-pixel { border-left: 0; border-top: 1px solid rgba(255,255,255,.28); border-radius: 0 0 2px 2px; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <symbol id="icon-discord" viewBox="0 0 21 20"><path d="M16.246 4.442a14.154 14.154 0 0 0-3.559-1.108.083.083 0 0 0-.058.025c-.15.275-.325.633-.442.908-1.325-.2-2.674-.2-4 0a8.355 8.355 0 0 0-.45-.908c-.008-.017-.033-.025-.058-.025a14.26 14.26 0 0 0-3.558 1.108c-.009 0-.017.009-.025.017-2.267 3.392-2.892 6.692-2.584 9.958 0 .017.009.034.025.042 1.5 1.1 2.942 1.767 4.367 2.208.025.009.05 0 .058-.016.334-.459.634-.942.892-1.45.017-.034 0-.067-.033-.075-.475-.184-.925-.4-1.367-.65-.033-.017-.033-.067-.008-.092.091-.067.183-.142.275-.208a.051.051 0 0 1 .058-.009c2.867 1.309 5.958 1.309 8.792 0a.051.051 0 0 1 .058.009c.092.075.183.141.275.216.033.025.033.075-.008.092a8.935 8.935 0 0 1-1.367.65c-.033.008-.042.05-.033.075.266.508.566.992.891 1.45.025.008.05.017.075.008a14.416 14.416 0 0 0 4.375-2.208.046.046 0 0 0 .025-.042c.367-3.775-.608-7.05-2.583-9.958-.008-.008-.017-.017-.033-.017Zm-8.959 7.984c-.858 0-1.575-.792-1.575-1.767 0-.975.7-1.767 1.575-1.767.884 0 1.584.8 1.575 1.767 0 .975-.7 1.767-1.575 1.767Zm5.809 0c-.859 0-1.575-.792-1.575-1.767 0-.975.7-1.767 1.575-1.767.883 0 1.583.8 1.575 1.767 0 .975-.692 1.767-1.575 1.767Z"/></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 529.6 529.6"><path d="M451.2 451.2h-78.5V328.3c0-29.3-.5-67-40.8-67s-47.1 31.9-47.1 64.9v125h-78.5V198.5h75.3V233h1.1c15.4-26.3 43.9-41.9 74.3-40.8 79.5 0 94.2 52.3 94.2 120.4v138.6ZM117.8 164c-25.1 0-45.5-20.4-45.5-45.5S92.7 73 117.8 73s45.5 20.4 45.5 45.5-20.4 45.5-45.5 45.5m39.3 287.2H78.5V198.5h78.6v252.7ZM490.4 0H39.1C17.8-.2.3 16.9 0 38.2v453.2c.3 21.3 17.7 38.4 39.1 38.2h451.3c21.4.3 38.9-16.8 39.2-38.2V38.2C529.3 16.8 511.7-.3 490.4 0"/></symbol>
+    <symbol id="icon-x" viewBox="0 0 14 15"><path d="M10.62 1.813h1.93L8.332 6.63l4.96 6.556H9.409L6.368 9.212l-3.48 3.976H.956l4.509-5.153L.709 1.812H4.69l2.75 3.635 3.18-3.635Zm-.678 10.22h1.07L4.11 2.907H2.962l6.98 9.126Z"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 21 20"><path d="M10.563 1.666a8.333 8.333 0 0 0-8.334 8.333c0 3.684 2.392 6.809 5.7 7.917.417.067.55-.192.55-.417v-1.408c-2.308.5-2.8-1.117-2.8-1.117-.383-.966-.925-1.225-.925-1.225-.758-.516.058-.5.058-.5.834.059 1.275.859 1.275.859.725 1.266 1.95.891 2.425.691.075-.541.292-.908.525-1.116-1.85-.209-3.791-.925-3.791-4.1 0-.925.316-1.667.858-2.259-.083-.208-.375-1.075.083-2.2 0 0 .7-.225 2.292.85a7.852 7.852 0 0 1 2.084-.275c.708 0 1.425.092 2.083.275 1.591-1.075 2.291-.85 2.291-.85.459 1.125.167 1.992.084 2.2.541.592.858 1.334.858 2.259 0 3.183-1.95 3.883-3.808 4.091.3.259.575.767.575 1.542v2.283c0 .225.133.492.558.417 3.308-1.117 5.692-4.233 5.692-7.917a8.335 8.335 0 0 0-8.334-8.333Z"/></symbol>
+    <symbol id="icon-figma" viewBox="0 0 15 15"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.05H5.525a1.475 1.475 0 0 0 0 2.95H7V2.05Zm0-1h2.475a2.475 2.475 0 0 1 1.492 4.45A2.475 2.475 0 0 1 8 9.463V11.425A2.475 2.475 0 1 1 4.033 9.45a2.471 2.471 0 0 1-.983-1.975c0-.807.386-1.523.983-1.975a2.475 2.475 0 0 1 1.492-4.45H7Zm1 1V5h1.475a1.475 1.475 0 1 0 0-2.95H8Zm-2.475 6.9H7V6H5.525a1.475 1.475 0 0 0-.006 2.95h.006ZM4.05 11.425c0-.813.657-1.472 1.47-1.475H7v1.475a1.475 1.475 0 0 1-2.95 0ZM8 7.472a1.475 1.475 0 1 1 0 .006v-.006Z"/></symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24"><path d="m4.497 20.835 16.51-7.363c1.324-.59 1.324-2.354 0-2.944L4.497 3.164c-1.495-.667-3.047.814-2.306 2.202l3.152 5.904c.245.459.245 1 0 1.458l-3.152 5.904c-.74 1.388.81 2.87 2.306 2.202"/></symbol>
+    <symbol id="icon-plus" viewBox="0 0 24 24"><path d="M12 4.5v15M19.5 12h-15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></symbol>
+    <symbol id="icon-bulb" viewBox="0 0 256 256"><path d="M176 232a8 8 0 0 1-8 8H88a8 8 0 0 1 0-16h80a8 8 0 0 1 8 8m40-128a87.55 87.55 0 0 1-33.64 69.21A16.24 16.24 0 0 0 176 186v6a16 16 0 0 1-16 16H96a16 16 0 0 1-16-16v-6a16 16 0 0 0-6.23-12.66A87.59 87.59 0 0 1 40 104.49C39.74 56.83 78.26 17.14 125.88 16A88 88 0 0 1 216 104"/></symbol>
+  </svg>
+
+  <nav class="top-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="https://bolt.new/static/favicon.svg" alt="Bolt icon" />
+        <span>bolt.new analysis</span>
+      </a>
+      <div class="nav-links" aria-label="Preview sections">
+        <a href="#colors">Colors</a>
+        <a href="#typography">Typography</a>
+        <a href="#components">Components</a>
+        <a href="#responsive">Responsive</a>
+      </div>
+      <div class="nav-actions">
+        <a class="source-icon" href="#known-gaps" aria-label="Discord"><svg class="icon"><use href="#icon-discord"/></svg></a>
+        <a class="source-icon" href="#known-gaps" aria-label="X"><svg class="icon"><use href="#icon-x"/></svg></a>
+        <a class="btn btn-secondary btn-sm" href="#known-gaps">Gaps</a>
+        <a class="btn btn-primary btn-sm" href="#components">Build now</a>
+        <span class="source-icon" aria-label="Open menu"><svg class="icon"><use href="#icon-menu"/></svg></span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow"><img src="https://bolt.new/static/favicon.svg" alt="" width="16" height="16" /> 00 - Public Site System</div>
+        <h1>What will you build today?</h1>
+        <p class="hero-copy">A dark AI builder system reduced into working tokens: prompt composer, real source icons, design-system imports, model routing, pricing cards, enterprise forms, and feature assets from the public Bolt site.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#components">Get started</a>
+          <a class="btn btn-secondary" href="#typography">Read tokens</a>
+        </div>
+        <div class="source-strip">
+          <span>source icons</span>
+          <span class="source-chip"><svg class="icon"><use href="#icon-figma"/></svg>Figma</span>
+          <span class="source-chip"><svg class="icon"><use href="#icon-github"/></svg>GitHub</span>
+          <span class="source-chip"><svg class="icon"><use href="#icon-discord"/></svg>Discord</span>
+          <span class="source-chip"><svg class="icon"><use href="#icon-x"/></svg>Twitter/X</span>
+        </div>
+      </div>
+
+      <div class="workbench" aria-label="Bolt-style product workbench">
+        <div class="window-bar">
+          <div class="dots"><span class="dot hot"></span><span class="dot"></span><span class="dot"></span></div>
+          <div class="window-title">bolt.new / design-system-import</div>
+          <img src="https://bolt.new/static/favicon.svg" width="20" height="20" alt="" />
+        </div>
+        <div class="workbench-body">
+          <div class="composer-panel">
+            <div class="prompt-box">
+              <div class="prompt-input"><span class="placeholder">Build a production dashboard using the imported design system...</span></div>
+              <div class="prompt-toolbar">
+                <span class="round-control"><svg class="icon"><use href="#icon-plus"/></svg></span>
+                <div class="toolbar-actions">
+                  <span class="btn btn-plan"><svg class="icon"><use href="#icon-bulb"/></svg><span>Plan</span></span>
+                  <span class="btn btn-send"><span>Build now</span><svg class="icon"><use href="#icon-send"/></svg></span>
+                </div>
+              </div>
+            </div>
+            <div class="source-strip" style="justify-content:center; margin-top:14px">
+              <span>or import from</span>
+              <span class="source-chip"><svg class="icon"><use href="#icon-figma"/></svg>Figma</span>
+              <span class="source-chip"><svg class="icon"><use href="#icon-github"/></svg>GitHub</span>
+            </div>
+            <div class="preview-stack">
+              <div class="response-card">
+                <h3>Agent draft</h3>
+                <div class="code-lines">
+                  <span class="code-line blue" style="width:82%"></span>
+                  <span class="code-line" style="width:96%"></span>
+                  <span class="code-line" style="width:68%"></span>
+                  <span class="code-line" style="width:88%"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="agent-panel">
+            <div class="agent-card">
+              <div class="agent-head">
+                <strong>Bolt Agent</strong>
+                <span class="badge">model routing</span>
+              </div>
+              <div class="agent-grid">
+                <div class="agent-cell"><div class="agent-label">Mode</div><div class="agent-value">Standard</div></div>
+                <div class="agent-cell"><div class="agent-label">Mode</div><div class="agent-value">Max</div></div>
+                <div class="agent-cell"><div class="agent-label">Speed</div><div class="agent-value">High</div></div>
+                <div class="agent-cell"><div class="agent-label">Token cost</div><div class="agent-value">Balanced</div></div>
+              </div>
+            </div>
+            <div class="stat-row">
+              <div class="stat"><b>98%</b><span>fewer error moments</span></div>
+              <div class="stat"><b>1M+</b><span>token scale language</span></div>
+              <div class="stat"><b>24/7</b><span>enterprise support</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="colors">
+    <div class="container">
+      <p class="section-label">01 - Color Palette</p>
+      <h2>Cool-blue actions on a near-black builder canvas</h2>
+      <p class="section-intro">The system uses dark surface steps, translucent white text tiers, and one blue action family. Thin borders carry most of the depth.</p>
+      <div class="grid-4">
+        <div class="swatch"><div class="swatch-color" style="background:#1488FC"></div><div class="swatch-meta">primary<br>#1488FC</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#2BA6FF"></div><div class="swatch-meta">brand hover / send<br>#2BA6FF</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#1E1E21"></div><div class="swatch-meta">canvas<br>#1E1E21</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#111114"></div><div class="swatch-meta">elevated<br>#111114</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#2C2C30"></div><div class="swatch-meta">surface soft<br>#2C2C30</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#101010"></div><div class="swatch-meta">chip<br>#101010</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#FFFEFF"></div><div class="swatch-meta">ink<br>#FFFEFF</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#FFFFFF99"></div><div class="swatch-meta">muted<br>#FFFFFF99</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#FFFFFF1A"></div><div class="swatch-meta">hairline<br>#FFFFFF1A</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#22C55E"></div><div class="swatch-meta">success<br>#22C55E</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#F97316"></div><div class="swatch-meta">warning<br>#F97316</div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#EF4444"></div><div class="swatch-meta">error<br>#EF4444</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section deep" id="typography">
+    <div class="container">
+      <p class="section-label">02 - Typography Scale</p>
+      <h2>Inter, tight display type, and monospace support</h2>
+      <p class="section-intro">Computed styles show Inter / Inter Display for public pages and a monospace token for code or terminal surfaces.</p>
+      <div class="grid-2">
+        <div class="type-card"><strong>Display - 48 / 48 / 700 / -1.2px</strong><p class="display-sample">Build with AI</p></div>
+        <div class="type-card"><strong>Enterprise Display - 66 / 72.6 / 500</strong><p class="enterprise-sample">Prototype to Production</p></div>
+        <div class="type-card"><strong>Heading - 52 / 62.4 / 500 / -1px</strong><p class="heading-sample">Production-ready systems</p></div>
+        <div class="type-card"><strong>Body - 16 / 24 / 400</strong><p class="body-sample">Use 75% white for readable explanations, feature text, and pricing details. Reserve pure white for titles and actions.</p></div>
+        <div class="type-card"><strong>Label - 14 / 20 / 500</strong><p class="body-sample">Navigation, buttons, segmented billing controls, tabs.</p></div>
+        <div class="type-card"><strong>Monospace</strong><p class="mono-sample">ui-monospace, Fira Code, Menlo, Monaco, Consolas</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="components">
+    <div class="container">
+      <p class="section-label">03 - Component System</p>
+      <h2>Source-backed Bolt components instead of placeholder cards</h2>
+      <p class="section-intro">The preview uses public Bolt source assets for icons, design-system brand cards, and feature visuals. Component groups mirror prompt, import, model, pricing, enterprise, and feature surfaces.</p>
+
+      <div class="component-section">
+        <p class="section-label">03A - Action Variants</p>
+        <div class="component-card">
+          <h3 class="component-heading">Buttons and action hierarchy</h3>
+          <p class="component-copy">6px blue buttons are site-level actions. Prompt execution uses the brighter pill with the same send icon observed in the source page.</p>
+          <div class="button-row">
+            <span class="btn btn-primary">Get started</span>
+            <span class="btn btn-secondary">Sign in</span>
+            <span class="btn btn-plan"><svg class="icon"><use href="#icon-bulb"/></svg><span>Plan</span></span>
+            <span class="btn btn-send"><span>Build now</span><svg class="icon"><use href="#icon-send"/></svg></span>
+            <span class="btn btn-secondary disabled">Disabled</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <p class="section-label">03B - Prompt Composer + Agent State</p>
+        <div class="workbench">
+          <div class="window-bar">
+            <div class="dots"><span class="dot hot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="window-title">prompt / model-routing</div>
+            <img src="https://bolt.new/static/favicon.svg" width="20" height="20" alt="" />
+          </div>
+          <div class="workbench-body">
+            <div class="composer-panel">
+              <div class="prompt-box">
+                <div class="prompt-input"><span class="placeholder">Create a billing page with teams, tokens, and private sharing...</span></div>
+                <div class="prompt-toolbar">
+                  <span class="round-control"><svg class="icon"><use href="#icon-plus"/></svg></span>
+                  <div class="toolbar-actions"><span class="btn btn-plan"><svg class="icon"><use href="#icon-bulb"/></svg><span>Plan</span></span><span class="btn btn-send"><span>Send message</span><svg class="icon"><use href="#icon-send"/></svg></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="agent-panel">
+              <div class="agent-card">
+                <div class="agent-head"><strong>Build plan</strong><span class="badge">ready</span></div>
+                <div class="agent-grid">
+                  <div class="agent-cell"><div class="agent-label">Step</div><div class="agent-value">Import tokens</div></div>
+                  <div class="agent-cell"><div class="agent-label">Step</div><div class="agent-value">Map components</div></div>
+                  <div class="agent-cell"><div class="agent-label">Step</div><div class="agent-value">Generate UI</div></div>
+                  <div class="agent-cell"><div class="agent-label">Step</div><div class="agent-value">Deploy preview</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <p class="section-label">03C - Design System Import Rail</p>
+        <div class="asset-rail">
+          <article class="brand-card">
+            <img class="bg" src="https://bolt.new/static/design-systems/brands/Porsche.png" alt="Porsche design system preview" />
+            <div class="brand-meta"><img src="https://bolt.new/api/design-systems/96de9aa8-2543-4658-aef6-abda7df52e2f/files/logo.webp" alt="Porsche logo" /><div><div class="brand-title">Porsche</div><div class="brand-sub">Design System</div></div></div>
+          </article>
+          <article class="brand-card">
+            <img class="bg" src="https://bolt.new/static/design-systems/brands/Material%20Design.png" alt="Material UI design system preview" />
+            <div class="brand-meta"><img src="https://bolt.new/api/design-systems/c780062a-25f0-4a60-bdaf-c5b27da476fb/files/logo.webp" alt="Material UI logo" /><div><div class="brand-title">Material UI</div><div class="brand-sub">Component library</div></div></div>
+          </article>
+          <article class="brand-card">
+            <img class="bg" src="https://bolt.new/static/design-systems/brands/Chakra.png" alt="Chakra design system preview" />
+            <div class="brand-meta"><img src="https://bolt.new/api/design-systems/e560d0e7-4fba-4857-a197-a03f50115e72/files/logo.webp" alt="Chakra logo" /><div><div class="brand-title">Chakra</div><div class="brand-sub">Token set</div></div></div>
+          </article>
+          <article class="brand-card">
+            <img class="bg" src="https://bolt.new/static/design-systems/brands/Shadcn.png" alt="Shadcn design system preview" />
+            <div class="brand-meta"><img src="https://bolt.new/api/design-systems/24db67f1-2979-4ee4-8881-1cf620ecf1e9/files/logo.webp" alt="Shadcn logo" /><div><div class="brand-title">Shadcn</div><div class="brand-sub">UI primitives</div></div></div>
+          </article>
+          <article class="brand-card">
+            <img class="bg" src="https://bolt.new/static/design-systems/brands/WAPO.png" alt="Washington Post design system preview" />
+            <div class="brand-meta"><img src="https://bolt.new/api/design-systems/8c0d5ecc-f2f4-486d-baee-8d50d61280ea/files/logo.webp" alt="Washington Post logo" /><div><div class="brand-title">Washington Post</div><div class="brand-sub">Brand guide</div></div></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <p class="section-label">03D - Feature Asset Cards</p>
+        <div class="feature-grid">
+          <article class="feature-card"><div class="feature-media"><img src="https://bolt.new/static/marketing/homepage/features/unlimited-db.svg" alt="Bolt unlimited databases visual" /></div><div class="feature-body"><h3 class="feature-title">Unlimited databases</h3><p class="feature-text">Source visual, dark card, centered product capability.</p></div></article>
+          <article class="feature-card"><div class="feature-media"><img src="https://bolt.new/static/marketing/homepage/features/graph.png" alt="Bolt enterprise graph visual" /></div><div class="feature-body"><h3 class="feature-title">Enterprise-grade</h3><p class="feature-text">Graph imagery sits inside a bordered dark module.</p></div></article>
+          <article class="feature-card"><div class="feature-media"><img src="https://bolt.new/static/marketing/homepage/features/auth.svg" alt="Bolt authentication visual" /></div><div class="feature-body"><h3 class="feature-title">Authentication</h3><p class="feature-text">Product UI art replaces generic icon placeholders.</p></div></article>
+          <article class="feature-card"><div class="feature-media"><img src="https://bolt.new/static/marketing/homepage/features/seo.svg" alt="Bolt SEO visual" /></div><div class="feature-body"><h3 class="feature-title">SEO optimization</h3><p class="feature-text">Keep copy short and the source asset dominant.</p></div></article>
+          <article class="feature-card"><div class="feature-media"><img src="https://bolt.new/static/marketing/homepage/features/publish.svg" alt="Bolt publishing visual" /></div><div class="feature-body"><h3 class="feature-title">Custom domains</h3><p class="feature-text">Hosting and domain concepts stay in the same surface style.</p></div></article>
+          <article class="feature-card"><div class="feature-media"><img src="https://bolt.new/static/marketing/homepage/value/build-without-breaking.png" alt="Bolt build without breaking visual" /></div><div class="feature-body"><h3 class="feature-title">Build big</h3><p class="feature-text">Marketing proof uses real product art, not abstract blocks.</p></div></article>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <p class="section-label">03E - Pricing Cards</p>
+        <div class="pricing-grid">
+          <article class="pricing-card"><div class="plan-top"><h3 class="plan-name">Free</h3></div><div class="price">$0</div><span class="btn btn-primary">Get started</span><ul class="feature-list"><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Public and private projects</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Starter token allowance</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Website hosting</span></li></ul></article>
+          <article class="pricing-card"><div class="plan-top"><h3 class="plan-name">Pro</h3></div><div class="price">$25 <span>/ month</span></div><span class="btn btn-primary">Get started</span><ul class="feature-list"><li><svg class="icon check"><use href="#icon-plus"/></svg><span>No daily token limit</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Private sharing</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Custom domain support</span></li></ul></article>
+          <article class="pricing-card"><div class="plan-top"><h3 class="plan-name">Teams</h3><span class="tag">POPULAR</span></div><div class="price">$30 <span>/ member</span></div><span class="btn btn-primary">Get started</span><ul class="feature-list"><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Centralized billing</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Team access management</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Organization sharing</span></li></ul></article>
+          <article class="pricing-card"><div class="plan-top"><h3 class="plan-name">Enterprise</h3></div><div class="price">Custom</div><span class="btn btn-secondary">Ask for a quote</span><ul class="feature-list"><li><svg class="icon check"><use href="#icon-plus"/></svg><span>SSO and audit support</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Provisioning controls</span></li><li><svg class="icon check"><use href="#icon-plus"/></svg><span>Dedicated account team</span></li></ul></article>
+        </div>
+      </div>
+
+      <div class="component-section">
+        <p class="section-label">03F - Enterprise Lead Form</p>
+        <div class="enterprise-form">
+          <h3 class="component-heading">Prototype to production</h3>
+          <p class="component-copy">The enterprise surface uses a hard-edged email field and a blue pixel-like submit button.</p>
+          <div class="form-row"><div class="email-input">Your work email</div><div class="submit-pixel">Submit <svg class="icon"><use href="#icon-send"/></svg></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section black" id="surfaces">
+    <div class="container">
+      <p class="section-label">04 - Alternate Surface</p>
+      <h2>Dark-only public system with deeper product zones</h2>
+      <p class="section-intro">No public light mode was observed. The usable contrast comes from dark surface steps and low-opacity borders.</p>
+      <div class="surface-demo">
+        <div class="surface-band" style="background:#1E1E21"><h3>Marketing / pricing canvas</h3><p>Use with 6px CTAs, 8px pricing cards, and translucent text tiers.</p></div>
+        <div class="surface-band" style="background:#111114"><h3>Product capability zone</h3><p>Use for model tables, source visuals, and enterprise proof sections.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="responsive">
+    <div class="container">
+      <p class="section-label">05 - Responsive Behavior</p>
+      <h2>Mobile keeps the prompt, collapses grids, and avoids overflow</h2>
+      <p class="section-intro">At 390px, nav links collapse, the prompt stays central, brand cards become a horizontal rail, and pricing cards stack.</p>
+      <div class="responsive-demo">
+        <div class="known-card"><h3 class="component-heading">Observed mobile rules</h3><ul><li>Home headline wraps while preserving the 48px display feel.</li><li>Prompt composer remains the primary first-screen component.</li><li>Pricing cards stack into one column.</li><li>Design-system cards can scroll horizontally on small screens.</li><li>No horizontal page overflow was observed in the checked mobile view.</li></ul></div>
+        <div class="phone">
+          <div class="phone-nav"><span class="brand"><img src="https://bolt.new/static/favicon.svg" alt="" /></span><span class="source-icon"><svg class="icon"><use href="#icon-menu"/></svg></span></div>
+          <h3 class="phone-title">What will you build today?</h3>
+          <div class="prompt-box"><div class="prompt-input"><span class="placeholder">Type your idea...</span></div><div class="prompt-toolbar"><span class="round-control"><svg class="icon"><use href="#icon-plus"/></svg></span><span class="btn btn-send"><svg class="icon"><use href="#icon-send"/></svg></span></div></div>
+          <div class="phone-card"><div class="plan-top"><h4 class="plan-name">Pro</h4></div><div class="price">$25 <span>/ month</span></div><span class="btn btn-primary" style="width:100%; margin-top:12px;">Get started</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section deep" id="known-gaps">
+    <div class="container">
+      <p class="section-label">06 - Known Gaps</p>
+      <h2>Scope and evidence limits</h2>
+      <p class="section-intro">This preview uses public Bolt assets and public-page observations. It is not an official Bolt guideline.</p>
+      <div class="known-card"><ul><li>Logged-in Builder, workspace, and project editor surfaces were not inspected.</li><li>The Resources dropdown did not successfully open during browser inspection, so dropdown contents are not represented as verified.</li><li>No prompt, email form, sign-in, purchase, upgrade, or account-changing action was submitted.</li><li>Remote source images/icons are loaded from public Bolt URLs to satisfy the source-icon requirement.</li></ul></div>
+    </div>
+  </section>
+</body>
+</html>
