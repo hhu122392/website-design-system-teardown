@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img alt="DESIGN.md Count" src="https://img.shields.io/badge/DESIGN.md%20count-1-10b981?style=classic">
+  <img alt="DESIGN.md Count" src="https://img.shields.io/badge/DESIGN.md%20count-2-10b981?style=classic">
   <img alt="Preview HTML" src="https://img.shields.io/badge/preview-html-1488FC?style=classic">
   <img alt="Codex Skill" src="https://img.shields.io/badge/Codex-skill-111827?style=classic">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=classic">
@@ -54,6 +54,23 @@ Case files:
 | [`DESIGN.en-US.md`](cases/developer-tools-ides/bolt-new/design-system-analysis/bolt-new-DESIGN.en-US.md) | English design-system teardown |
 | [`preview.html`](cases/developer-tools-ides/bolt-new/design-system-analysis/bolt-new-preview.html) | Browser-checkable visual catalog |
 | [`metadata.md`](cases/developer-tools-ides/bolt-new/metadata.md) | Source URL, category, access state, observed pages, and known gaps |
+
+### Travel & Hospitality
+
+- [**Airbnb**](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-DESIGN.en-US.md) - Public travel marketplace. White canvas, Airbnb Cereal typography, Rausch pink-red actions, source-backed Homes / Experiences / Services navigation icons, pill search, image-first listing cards, host acquisition modules, help-center surfaces, and responsive card behavior.
+
+Preview:
+
+![Airbnb preview](assets/airbnb-preview.gif)
+
+Case files:
+
+| File | Purpose |
+|------|---------|
+| [`DESIGN.zh-CN.md`](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-DESIGN.zh-CN.md) | Chinese design-system teardown |
+| [`DESIGN.en-US.md`](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-DESIGN.en-US.md) | English design-system teardown |
+| [`preview.html`](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-preview.html) | Browser-checkable visual catalog |
+| [`metadata.md`](cases/travel-hospitality/airbnb/metadata.md) | Source URL, category, access state, observed pages, verification notes, and known gaps |
 
 ## What's Inside This Case Format
 
@@ -162,6 +179,13 @@ website-design-system-teardown/
           bolt-new-DESIGN.zh-CN.md
           bolt-new-DESIGN.en-US.md
           bolt-new-preview.html
+    travel-hospitality/
+      airbnb/
+        metadata.md
+        design-system-analysis/
+          airbnb-DESIGN.zh-CN.md
+          airbnb-DESIGN.en-US.md
+          airbnb-preview.html
 ```
 
 ## Contributing Cases

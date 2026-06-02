@@ -13,6 +13,7 @@ The category structure follows the public collection pattern used by `VoltAgent/
 - `design-creative-tools/`
 - `fintech-crypto/`
 - `ecommerce-retail/`
+- `travel-hospitality/`
 - `media-consumer-tech/`
 - `automotive/`
 - `retro-web-nostalgia/`

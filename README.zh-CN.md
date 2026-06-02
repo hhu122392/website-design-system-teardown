@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img alt="DESIGN.md Count" src="https://img.shields.io/badge/DESIGN.md%20count-1-10b981?style=classic">
+  <img alt="DESIGN.md Count" src="https://img.shields.io/badge/DESIGN.md%20count-2-10b981?style=classic">
   <img alt="Preview HTML" src="https://img.shields.io/badge/preview-html-1488FC?style=classic">
   <img alt="Codex Skill" src="https://img.shields.io/badge/Codex-skill-111827?style=classic">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-blue?style=classic">
@@ -54,6 +54,23 @@ Preview:
 | [`DESIGN.en-US.md`](cases/developer-tools-ides/bolt-new/design-system-analysis/bolt-new-DESIGN.en-US.md) | 英文设计系统拆解 |
 | [`preview.html`](cases/developer-tools-ides/bolt-new/design-system-analysis/bolt-new-preview.html) | 可浏览器检查的视觉预览 |
 | [`metadata.md`](cases/developer-tools-ides/bolt-new/metadata.md) | 来源 URL、分类、访问状态、已检查页面和已知缺口 |
+
+### 旅行与住宿
+
+- [**Airbnb**](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-DESIGN.zh-CN.md) - 公开旅行交易平台。白色画布、Airbnb Cereal 字体、Rausch 红粉行动色、源站 Homes / Experiences / Services 顶部图标、胶囊搜索、图片优先房源卡、房东招募模块、帮助中心表面和响应式卡片行为共同构成这套系统。
+
+Preview:
+
+![Airbnb preview](assets/airbnb-preview.gif)
+
+案例文件：
+
+| 文件 | 用途 |
+|------|------|
+| [`DESIGN.zh-CN.md`](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-DESIGN.zh-CN.md) | 中文设计系统拆解 |
+| [`DESIGN.en-US.md`](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-DESIGN.en-US.md) | 英文设计系统拆解 |
+| [`preview.html`](cases/travel-hospitality/airbnb/design-system-analysis/airbnb-preview.html) | 可浏览器检查的视觉预览 |
+| [`metadata.md`](cases/travel-hospitality/airbnb/metadata.md) | 来源 URL、分类、访问状态、已检查页面、验收记录和已知缺口 |
 
 ## 这个案例格式包含什么
 
@@ -162,6 +179,13 @@ website-design-system-teardown/
           bolt-new-DESIGN.zh-CN.md
           bolt-new-DESIGN.en-US.md
           bolt-new-preview.html
+    travel-hospitality/
+      airbnb/
+        metadata.md
+        design-system-analysis/
+          airbnb-DESIGN.zh-CN.md
+          airbnb-DESIGN.en-US.md
+          airbnb-preview.html
 ```
 
 ## 贡献案例
