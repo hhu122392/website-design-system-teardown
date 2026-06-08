@@ -34,6 +34,9 @@ The preview must feel like a real product surface built from the source site's d
 - Do not use a real source asset in the wrong role. A card photo, article thumbnail, hero image, or product screenshot is not an acceptable replacement for a top-nav icon, tab icon, social icon, integration icon, or tool icon.
 - Do not invent device frames, phone shells, browser chrome, fake product screenshots, or mock app windows unless the source site visibly uses that exact type of frame. Responsive behavior should be demonstrated by real components collapsing, stacking, resizing, or becoming swipeable.
 - Do not hard-code active nav/tab states when links can change the current section. Selected underlines, active pills, and `aria-current` values must match the current hash and update after click.
+- Do not place mobile-only overlays, bottom sheets, modal invite cards, game boards, or share surfaces inside a generic padded documentation card if that changes their width, clipping, or source viewport behavior. Give those components a source-sized viewport wrapper first, then place that wrapper in the preview.
+- Do not place text directly on image-artwork CTAs when the source uses a separate label layer. Preserve the outer artwork layer and the inner label/icon layer, including observed offsets such as `margin-top`, `top`, `bottom`, transforms, line height, and animation ownership.
+- Do not assume `align-items: center` is enough for visual centering. Source artwork may have a visual center that differs from the element's geometric center because of highlights, shadows, empty transparent pixels, or decorative borders.
 
 ## Source Asset Rules
 
@@ -62,6 +65,32 @@ Asset role matching:
 - Social or integration icon -> observed social/integration SVG, image, CSS mask, or faithful inline vector.
 - Content card media -> observed content-card media only inside content cards, galleries, heroes, or media tiles.
 - Responsive examples -> the same observed components in a narrower layout, not a fabricated device screenshot.
+
+## Source-to-Preview Fidelity Ledger
+
+Before writing or finalizing the preview, create a small evidence ledger for every signature component that can easily drift:
+
+- `sourceRect`: x, y, width, height, and viewport size.
+- `previewRect`: x, y, width, height, and viewport size after implementation.
+- `sourceComputed`: font size, line height, weight, color, background image, background size, display, alignment, position, top/bottom/margins, transform, animation name, duration, and timing.
+- `previewComputed`: the same values for the preview.
+- `textFit`: `clientWidth`, `scrollWidth`, `white-space`, and whether long dynamic text fits.
+- `layers`: outer artwork/background layer, text label layer, icon layer, gesture layer, motion layer, and which layer owns each style.
+- `intentionalOverflow`: whether the source intentionally lets a card, hand gesture, modal, or art asset overflow/crop at mobile width.
+
+Use this ledger for campaign CTAs, action buttons, badges, reward amounts, animated bubbles, tab controls, modal sheets, game cards, and invite/share surfaces. A screenshot can support the ledger, but it cannot replace measured evidence.
+
+## Text and Optical Alignment Rules
+
+Run these checks on every text-bearing component that looks like a control or compact data display:
+
+- Buttons and CTAs: if the source uses image artwork, recreate the label as a child layer. Match the observed child-layer offset instead of centering the outer element by habit.
+- Numeric rewards and balances: check the longest observed sample. If the source keeps it on one line, use `clamp()`, max width, or a measured font-size cap so `scrollWidth <= clientWidth`.
+- Pills, chips, bubbles, tabs, and counters: verify the text does not overflow, wrap unexpectedly, or sit too high/low inside the visual shape.
+- Icon + label buttons: verify the icon center and text layer center match the source. If the source icon is a child of the label layer, do not position it as a separate unrelated overlay.
+- Artwork controls: compare visual center, not only geometric center. Record source offsets such as `margin-top: -12px` or `top: 37%` when they exist.
+
+When fixing one control, search for all repeated instances of the same class or source asset and update them together.
 
 ## Required Page Structure
 
@@ -187,6 +216,11 @@ Verification checks:
 - Active nav/tab state is tested on a direct hash URL and after at least one real click when the preview includes selected states.
 - Any screenshot or GIF used in README or case documentation is regenerated after the final preview edit.
 - The first viewport visually resembles a polished mini product preview, not a documentation page.
+- Every repeated CTA/button class is audited globally, not just the one visible in the latest screenshot.
+- For all compact text-bearing controls and numeric displays, `scrollWidth <= clientWidth` unless the source intentionally scrolls or clips the content.
+- For source-artwork buttons, the preview includes the same layer split as the source: outer artwork, inner label, optional icon, optional gesture, and correct animation owner.
+- For mobile overlays and modal cards, the preview wrapper matches the source mobile viewport and preserves intentional side overflow/cropping. A desktop documentation container must not squeeze the component.
+- Screenshot evidence includes the intended target component. If a screenshot is captured after scrolling, record the target `getBoundingClientRect()` in the same browser state.
 
 Screenshot checks are useful but not the only proof. If screenshot capture times out, still run DOM/layout/image-load checks and report that screenshot capture failed.
 

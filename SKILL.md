@@ -1,6 +1,6 @@
 ---
 name: website-design-system-teardown
-description: Analyze a live website with the Browser plugin and produce bilingual Chinese and English DESIGN.md-style design system documents plus a self-contained HTML preview. Use when the user gives a website URL and asks to break down a design system, analyze visual language, extract colors/typography/components/layout rules, create DESIGN.md, output preview HTML, save a completed case, collect cases by category, or create new design-system documents based on a site.
+description: Use when a user gives a live URL or logged-in page and asks to break down, document, preview, save, or collect a website/app design system, including bilingual DESIGN.md files, source-backed assets, component rules, responsive behavior, or a self-contained HTML preview.
 ---
 
 # Website Design System Teardown
@@ -34,6 +34,10 @@ Read these only when this skill is used:
    - logo, favicon, icon SVGs, CSS mask icons, product images, UI mock images, screenshots, brand tiles, partner marks, and other public visual assets that define the source site's look
    - component-specific icon assets, especially top navigation, tab, menu, social, integration, and tool icons; do not reuse unrelated content images as icons
    - responsive changes on desktop and mobile when practical
+   - source rectangles and computed styles for signature components, especially buttons, badges, modal cards, numeric reward text, and fixed/mobile overlays
+   - child-layer structure for image-artwork components: outer background asset, inner text layer, icon layer, gesture layer, animation layer, and any source offsets such as `top`, `bottom`, `margin`, or transforms
+   - text-fit metrics for compact or dynamic text: `clientWidth`, `scrollWidth`, font size, line height, white-space, and whether the longest observed text stays inside its visual container
+   - animation evidence for moving CTAs or attention cues: animation name, duration, timing, and which element owns the animation
 5. Separate facts from inference. Write "inferred" or "likely" when a rule is inferred from repeated patterns rather than directly measurable.
 6. Write two Markdown documents by default:
    - `design-system-analysis/<site-slug>-DESIGN.zh-CN.md`
@@ -44,6 +48,17 @@ Read these only when this skill is used:
 9. Make the preview HTML reflect the same tokens and component rules documented in the Markdown files. It must include anchor navigation, sectioned preview blocks, domain-specific components, and source-backed visual assets. It is not a generic demo page and not a prose documentation page.
 10. Include a short "Known Gaps" section in both documents for pages not visited, hidden states not tested, missing fonts, blocked assets, login-gated surfaces not accessed, or anything uncertain.
 11. If the user asks to collect the case for the skill repository, save it under the matching `cases/<category>/<site-slug>/` folder using `cases/CASE_COLLECTION.md`.
+
+## High-Risk Fidelity Rules
+
+These rules exist because preview pages can look close while still missing the source system.
+
+- Do not treat image-artwork buttons as ordinary web buttons. If the source CTA uses a PNG/WebP/SVG background, inspect whether the label is a child layer with its own offset, margin, top ratio, height, icon, or transform. Recreate that layer structure. Do not rely on plain `align-items: center` unless the source does.
+- When one button or badge is fixed, search for every repeated instance of that component class in the preview and update all of them. A hero CTA, fixed CTA, and component-sample CTA using the same source asset must share the same label-layer rules.
+- For reward numbers, balances, counters, tickers, tab labels, and CTA labels, verify text fit with DOM metrics. `scrollWidth` must not exceed `clientWidth` unless the source intentionally scrolls or clips that text.
+- For modal, drawer, bottom sheet, game board, phone-sized campaign, or invite/share surfaces, render the component in its source viewport width before placing it inside the preview page. Do not let a generic documentation card, container padding, desktop column, or grid item squeeze a mobile overlay and change its proportions.
+- For game, promotion, referral, invite, coupon, checkout, or other interaction-heavy pages, inspect the triggered states that define the design system: rules/help modal, action modal, child page, remaining-count state, flipped/revealed state, and any animated CTA cue. Do this read-only unless the user explicitly authorizes an external side effect.
+- After a user reports a visual mismatch, compare source and preview with measured boxes, not only screenshots. Record the exact failed metric, fix the component, then rerun the same metric plus a screenshot.
 
 ## Output Rules
 
@@ -102,6 +117,12 @@ Before saying the skill output is ready:
    - mobile nav/grid collapse works
    - interactive selected states, such as nav tab underlines, match the current hash/URL and update after a real click
    - the preview does not look like a generic documentation page
+   - repeated buttons and button-like controls use the same vertical label-layer rules as the source; audit all instances of shared CTA classes
+   - text-bearing compact elements do not overflow their own boxes: check `scrollWidth <= clientWidth` for CTAs, reward amounts, badges, pills, tabs, and counters
+   - mobile overlays and modal cards keep the same source viewport width, internal card width, and intentional overflow/cropping behavior
+   - animation ownership matches the source: the same outer or inner layer owns the animation, and the timing values match observed computed styles
 10. After any visual or interaction fix, rerun image-load, overflow, active-state, and mobile checks. Do not reuse an older screenshot or GIF in the README after changing the preview.
 11. If screenshots fail because the browser screenshot command times out, still run DOM/layout/image-load checks and say exactly what was and was not verified. Do not claim screenshot verification passed unless it did.
 12. If login assistance was needed, confirm the Known Gaps accurately say which logged-in surfaces were or were not inspected.
+13. Scan final documents, preview HTML, and evidence files for private account data, URL tokens, login tokens, API responses, masked real-user ticker text, placeholders, mojibake, and fake assets. Remove or redact anything that is not needed for the design-system analysis.
+14. When saving screenshots, verify the screenshot actually contains the target component by recording its `getBoundingClientRect()` in the same browser state. A screenshot of the wrong scroll position is not proof.

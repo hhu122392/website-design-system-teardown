@@ -12,6 +12,9 @@ Collect enough proof to support the document:
 - Collect source-backed visual assets that define the system: favicon, logo, app icons, inline SVGs, CSS mask icons, product images, feature art, partner marks, brand cards, screenshots, or UI mock images.
 - Check desktop and mobile behavior when practical.
 - List observed pages and known gaps in the final document.
+- For signature interactive components, capture source rectangles, computed styles, child layers, animation ownership, and text-fit metrics. This is required for image-artwork buttons, animated CTAs, badges, reward numbers, modal cards, bottom sheets, game boards, and share/invite surfaces.
+- For any compact dynamic text, record whether the longest observed text fits inside its own visual box. Use DOM evidence such as `clientWidth`, `scrollWidth`, `white-space`, font size, and line height when possible.
+- For source image buttons or decorative controls, record the layer split: outer artwork/background, inner label, icon, gesture/hand cue, and any observed offset such as `margin-top`, `top`, `bottom`, or transform.
 
 Never write a claim as fact if it was not observed. Mark pattern-based judgments as inferred.
 
@@ -165,6 +168,14 @@ Analyze common and signature components:
 
 For each component, cover structure, visual styling, states if visible, and when to use it.
 
+For high-fidelity components, include enough implementation detail to prevent a future preview from drifting:
+
+- Buttons and CTAs: whether the control is a real CSS button, a source artwork button, or a layered artwork button. Record label position, icon position, animation owner, and optical-centering offsets.
+- Numeric displays: maximum observed text length, font-size cap, one-line/wrapping behavior, and overflow prevention.
+- Modal or overlay surfaces: source viewport width, internal card width, intentional side overflow/cropping, background dimming, close control placement, and whether the component should be shown in a source-sized wrapper in the preview.
+- Badges, chips, and bubbles: source asset role, text size, line height, vertical alignment, and whether the element is clickable or informational.
+- Repeated components: if the same class or source asset appears in hero, fixed action, and component sample areas, document one shared rule instead of letting each instance drift.
+
 When the source is a product, app, developer tool, AI tool, finance platform, marketplace, or media product, include domain-specific component patterns. For example: prompt composers, command palettes, terminal/code panels, model or pricing tables, usage meters, settings panels, product mock surfaces, integration cards with real icons, checkout panels, watch/player modules, trading rows, or catalog cards. Avoid reducing the preview to generic cards with explanatory text.
 
 ## Do's and Don'ts
@@ -190,6 +201,8 @@ Cover:
 
 If mobile was not checked, state that in Known Gaps.
 
+For mobile-first or activity pages, explicitly document source viewport behavior. A campaign modal, game board, or invite/share card may be wider than the visible viewport and intentionally crop at the sides. Do not summarize this as "responsive card"; write the measured viewport width, internal card width, and how clipping is supposed to behave.
+
 ## Iteration Guide
 
 Tell a future UI-building agent how to use the analysis:
@@ -211,3 +224,5 @@ Always include this section in both language versions. Examples:
 - exact brand fonts unavailable
 - color values approximated
 - public icon or media assets that failed to load in preview verification
+- dynamic states or external actions that were not clicked, such as final share submission, checkout, purchase, recharge, send message, or social share confirmation
+- text-fit or alignment values that were inferred from screenshot instead of measured from computed styles
