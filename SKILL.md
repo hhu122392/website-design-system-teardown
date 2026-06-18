@@ -16,6 +16,7 @@ Read these only when this skill is used:
 - `references/design-md-breakdown-standard.md` for the teardown standard.
 - `references/design-system-output-template.md` before writing the final document.
 - `references/preview-html-standard.md` before writing the HTML preview.
+- `references/final-audit-standard.md` before final verification and before saying the teardown is ready.
 - `references/login-collaboration.md` when the target site hides important UI behind login.
 - `cases/CASE_COLLECTION.md` when saving or organizing completed cases.
 
@@ -47,7 +48,10 @@ Read these only when this skill is used:
 8. Keep both language versions structurally identical. The English version must be a faithful counterpart to the Chinese version, not a shorter summary.
 9. Make the preview HTML reflect the same tokens and component rules documented in the Markdown files. It must include anchor navigation, sectioned preview blocks, domain-specific components, and source-backed visual assets. It is not a generic demo page and not a prose documentation page.
 10. Include a short "Known Gaps" section in both documents for pages not visited, hidden states not tested, missing fonts, blocked assets, login-gated surfaces not accessed, or anything uncertain.
-11. If the user asks to collect the case for the skill repository, save it under the matching `cases/<category>/<site-slug>/` folder using `cases/CASE_COLLECTION.md`.
+11. Write a final audit file by default:
+   - `design-system-analysis/<site-slug>-AUDIT.md`
+   It must follow `references/final-audit-standard.md` and include the actual checks run, evidence reviewed, remaining P2 issues, and blocked P0/P1 items if any.
+12. If the user asks to collect the case for the skill repository, save it under the matching `cases/<category>/<site-slug>/` folder using `cases/CASE_COLLECTION.md`.
 
 ## High-Risk Fidelity Rules
 
@@ -126,3 +130,5 @@ Before saying the skill output is ready:
 12. If login assistance was needed, confirm the Known Gaps accurately say which logged-in surfaces were or were not inspected.
 13. Scan final documents, preview HTML, and evidence files for private account data, URL tokens, login tokens, API responses, masked real-user ticker text, placeholders, mojibake, and fake assets. Remove or redact anything that is not needed for the design-system analysis.
 14. When saving screenshots, verify the screenshot actually contains the target component by recording its `getBoundingClientRect()` in the same browser state. A screenshot of the wrong scroll position is not proof.
+15. Read `references/final-audit-standard.md`, create `design-system-analysis/<site-slug>-AUDIT.md`, and complete the scope, coverage, evidence, preview, component-level, interaction, privacy, severity, and final summary sections.
+16. Do not finish with known P0 issues. Do not finish with known P1 issues unless they are genuinely blocked and named in both Known Gaps and the audit final summary. List any remaining P2 issues plainly.
