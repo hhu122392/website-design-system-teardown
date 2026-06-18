@@ -1,0 +1,285 @@
+{
+  "generatedAt": "2026-06-18T09:30:04.826Z",
+  "verificationTool": "Playwright Chromium",
+  "previewUrl": "http://127.0.0.1:8787/pinduoduo-special-nine-newcomer-001-teardown-20260618/design-system-analysis/pinduoduo-special-nine-newcomer-001-preview.html",
+  "before": [
+    {
+      "index": 0,
+      "ariaLabel": "仅剩 06:47:32.2",
+      "text": "06:47:32:2",
+      "boxes": [
+        {
+          "text": "06",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "47",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "32",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "2",
+          "className": "timer-box ms timer-tick",
+          "clientWidth": 15,
+          "scrollWidth": 15,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "timer-tick",
+          "animationDuration": "0.18s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "ariaLabel": "仅剩 06:47:32.2",
+      "text": "06:47:32:2",
+      "boxes": [
+        {
+          "text": "06",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "47",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "32",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "2",
+          "className": "timer-box ms timer-tick",
+          "clientWidth": 15,
+          "scrollWidth": 15,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "timer-tick",
+          "animationDuration": "0.18s"
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "index": 0,
+      "ariaLabel": "仅剩 06:47:31.5",
+      "text": "06:47:31:5",
+      "boxes": [
+        {
+          "text": "06",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "47",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "31",
+          "className": "timer-box timer-tick",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "timer-tick",
+          "animationDuration": "0.18s"
+        },
+        {
+          "text": "5",
+          "className": "timer-box ms timer-tick",
+          "clientWidth": 15,
+          "scrollWidth": 15,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "timer-tick",
+          "animationDuration": "0.18s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "ariaLabel": "仅剩 06:47:31.5",
+      "text": "06:47:31:5",
+      "boxes": [
+        {
+          "text": "06",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "47",
+          "className": "timer-box",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "none",
+          "animationDuration": "0s"
+        },
+        {
+          "text": "31",
+          "className": "timer-box timer-tick",
+          "clientWidth": 27,
+          "scrollWidth": 27,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "timer-tick",
+          "animationDuration": "0.18s"
+        },
+        {
+          "text": "5",
+          "className": "timer-box ms timer-tick",
+          "clientWidth": 15,
+          "scrollWidth": 15,
+          "clientHeight": 24,
+          "scrollHeight": 24,
+          "animationName": "timer-tick",
+          "animationDuration": "0.18s"
+        }
+      ]
+    }
+  ],
+  "changed": true,
+  "motionEvents": [
+    {
+      "index": 3,
+      "text": "1",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 7,
+      "text": "1",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 3,
+      "text": "0",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 7,
+      "text": "0",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 2,
+      "text": "31",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 3,
+      "text": "9",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 6,
+      "text": "31",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 7,
+      "text": "9",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 3,
+      "text": "8",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 7,
+      "text": "8",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 3,
+      "text": "7",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 7,
+      "text": "7",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 3,
+      "text": "6",
+      "animationName": "timer-tick"
+    },
+    {
+      "index": 7,
+      "text": "6",
+      "animationName": "timer-tick"
+    }
+  ],
+  "motionEventCount": 14,
+  "layout": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "noHorizontalOverflow": true,
+    "documentWidth": 390,
+    "bodyWidth": 390,
+    "overflow": [],
+    "activeLinks": [
+      "#colors"
+    ]
+  },
+  "screenshot": "C:\\Users\\zhoua\\Desktop\\主题拆解SKILL\\pinduoduo-special-nine-newcomer-001-teardown-20260618\\screenshots\\08-preview-countdown-motion-mobile.png"
+}

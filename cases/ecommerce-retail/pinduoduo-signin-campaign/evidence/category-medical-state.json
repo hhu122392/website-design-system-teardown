@@ -1,0 +1,96 @@
+{
+  "arr": [
+    {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderBottom": "0px none rgb(21, 21, 22)",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "color": "rgb(21, 21, 22)",
+      "fontSize": "15.6px",
+      "fontWeight": "400",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 0,
+        "y": 401
+      },
+      "text": "全部"
+    },
+    {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderBottom": "0px none rgb(224, 46, 36)",
+      "className": "xhihw py6XU current cartoon-widgets-parent-menu-ex-li",
+      "color": "rgb(224, 46, 36)",
+      "fontSize": "15.6px",
+      "fontWeight": "700",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 58,
+        "y": 401
+      },
+      "text": "医药"
+    },
+    {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderBottom": "0px none rgb(21, 21, 22)",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "color": "rgb(21, 21, 22)",
+      "fontSize": "15.6px",
+      "fontWeight": "400",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 116,
+        "y": 401
+      },
+      "text": "食品"
+    },
+    {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderBottom": "0px none rgb(21, 21, 22)",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "color": "rgb(21, 21, 22)",
+      "fontSize": "15.6px",
+      "fontWeight": "400",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 175,
+        "y": 401
+      },
+      "text": "手机"
+    },
+    {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderBottom": "0px none rgb(21, 21, 22)",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "color": "rgb(21, 21, 22)",
+      "fontSize": "15.6px",
+      "fontWeight": "400",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 233,
+        "y": 401
+      },
+      "text": "水果"
+    },
+    {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderBottom": "0px none rgb(21, 21, 22)",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "color": "rgb(21, 21, 22)",
+      "fontSize": "15.6px",
+      "fontWeight": "400",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 291,
+        "y": 401
+      },
+      "text": "百货"
+    }
+  ],
+  "scrollY": 218,
+  "visibleText": "[redacted personalized product/feed text]"
+}

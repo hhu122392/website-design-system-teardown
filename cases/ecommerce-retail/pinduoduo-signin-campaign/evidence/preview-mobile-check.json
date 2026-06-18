@@ -1,0 +1,20 @@
+{
+  "activeLinks": [
+    "#colors"
+  ],
+  "bodyScrollWidth": 375,
+  "brokenImages": [],
+  "clientWidth": 375,
+  "compactOverflow": [],
+  "documentWidth": 375,
+  "imageCount": 2,
+  "noHorizontalOverflow": true,
+  "nonBlank": true,
+  "title": "Pinduoduo Sign-in Campaign Design System Preview",
+  "url": "http://127.0.0.1:8787/pinduoduo-signin-teardown-20260618/design-system-analysis/pinduoduo-signin-campaign-preview.html",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  },
+  "visibleSections": []
+}

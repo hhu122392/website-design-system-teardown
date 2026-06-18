@@ -1,0 +1,95 @@
+{
+  "soundCount": 1,
+  "menuExtract": [
+    {
+      "bg": "rgb(255, 255, 255)",
+      "className": "jsx-3783852350 jsx-681154363 popupover popupover-modal",
+      "color": "rgb(253, 248, 248)",
+      "font": "104px",
+      "radius": "4.16px",
+      "rect": {
+        "h": 119,
+        "w": 92,
+        "x": 275,
+        "y": 146
+      },
+      "text": "活动规则 打款明细 音效",
+      "weight": "400"
+    },
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "className": "jsx-3889050682 text-wrapper",
+      "color": "rgb(21, 21, 22)",
+      "font": "14.56px",
+      "radius": "0px",
+      "rect": {
+        "h": 40,
+        "w": 92,
+        "x": 275,
+        "y": 146
+      },
+      "text": "活动规则",
+      "weight": "400"
+    },
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "className": "jsx-3055537284 text-warper ",
+      "color": "rgb(21, 21, 22)",
+      "font": "14.56px",
+      "radius": "0px",
+      "rect": {
+        "h": 40,
+        "w": 92,
+        "x": 275,
+        "y": 186
+      },
+      "text": "打款明细",
+      "weight": "400"
+    },
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "className": "jsx-3055537284 main-info",
+      "color": "rgb(21, 21, 22)",
+      "font": "0px",
+      "radius": "13.52px",
+      "rect": {
+        "h": 40,
+        "w": 92,
+        "x": 275,
+        "y": 186
+      },
+      "text": "打款明细",
+      "weight": "400"
+    },
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "className": "jsx-3055537284",
+      "color": "rgb(21, 21, 22)",
+      "font": "14.56px",
+      "radius": "0px",
+      "rect": {
+        "h": 19,
+        "w": 58,
+        "x": 292,
+        "y": 196
+      },
+      "text": "打款明细",
+      "weight": "400"
+    },
+    {
+      "bg": "rgba(0, 0, 0, 0)",
+      "className": "jsx-1828853766 container",
+      "color": "rgb(21, 21, 22)",
+      "font": "14.56px",
+      "radius": "0px",
+      "rect": {
+        "h": 40,
+        "w": 92,
+        "x": 275,
+        "y": 225
+      },
+      "text": "音效",
+      "weight": "400"
+    }
+  ]
+}

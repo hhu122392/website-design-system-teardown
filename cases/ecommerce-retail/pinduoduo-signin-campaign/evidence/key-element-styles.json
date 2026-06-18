@@ -1,0 +1,2547 @@
+{
+  "签到领现金": [
+    {
+      "text": "签到领现金",
+      "ownText": "签到领现金",
+      "className": "jsx-978371663 default-title",
+      "rect": {
+        "h": 23,
+        "w": 94,
+        "x": 34,
+        "y": 43
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "18.72px",
+        "weight": "500",
+        "line": "22.88px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 23,
+        "clientWidth": 94,
+        "scrollHeight": 24,
+        "scrollWidth": 94
+      }
+    },
+    {
+      "text": "签到领现金 [redacted search keyword]",
+      "ownText": "",
+      "className": "jsx-978371663 no-show-white-nav-bar-title title with-header-search-bar  title-wrapper-simple-new-ui",
+      "rect": {
+        "h": 31,
+        "w": 390,
+        "x": -7,
+        "y": 38
+      },
+      "style": {
+        "color": "rgb(32, 33, 35)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "18.72px",
+        "weight": "400",
+        "line": "22.88px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -195, 0)",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 31,
+        "clientWidth": 390,
+        "scrollHeight": 31,
+        "scrollWidth": 390
+      }
+    }
+  ],
+  "我的现金账户": [
+    {
+      "text": "我的现金账户",
+      "ownText": "我的现金账户",
+      "className": "BottP",
+      "rect": {
+        "h": 14,
+        "w": 81,
+        "x": 46,
+        "y": 83
+      },
+      "style": {
+        "color": "rgb(170, 47, 23)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "400",
+        "line": "13.52px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 14,
+        "clientWidth": 81,
+        "scrollHeight": 16,
+        "scrollWidth": 81
+      }
+    },
+    {
+      "text": "我的现金账户",
+      "ownText": "",
+      "className": "gx6ux",
+      "rect": {
+        "h": 22,
+        "w": 108,
+        "x": 25,
+        "y": 79
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgb(255, 224, 230)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "12.48px 0px 8.32px",
+        "pos": "absolute",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 22,
+        "clientWidth": 108,
+        "scrollHeight": 22,
+        "scrollWidth": 108
+      }
+    }
+  ],
+  "领更多现金": [
+    {
+      "text": "领更多现金",
+      "ownText": "领更多现金",
+      "className": "EXdGh",
+      "rect": {
+        "h": 14,
+        "w": 68,
+        "x": 232,
+        "y": 121
+      },
+      "style": {
+        "color": "rgb(234, 60, 50)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "13.52px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 14,
+        "clientWidth": 68,
+        "scrollHeight": 16,
+        "scrollWidth": 68
+      }
+    },
+    {
+      "text": "领更多现金",
+      "ownText": "",
+      "className": "pr4a9",
+      "rect": {
+        "h": 22,
+        "w": 86,
+        "x": 227,
+        "y": 117
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "11.96px",
+        "pos": "static",
+        "transform": "matrix(1, 0, 0, 1, 0, 4.16)",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 84,
+        "scrollHeight": 20,
+        "scrollWidth": 84
+      }
+    }
+  ],
+  "奖池已更新": [
+    {
+      "text": "奖池已更新",
+      "ownText": "奖池已更新",
+      "className": "jpE8G",
+      "rect": {
+        "h": 18,
+        "w": 84,
+        "x": 305,
+        "y": 155
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "linear-gradient(-2deg, rgb(255, 49, 50), rgb(255, 99, 61))",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "13.52px",
+        "radius": "0px 15.6px 0px 4.16px",
+        "pos": "absolute",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 18,
+        "clientWidth": 84,
+        "scrollHeight": 18,
+        "scrollWidth": 84
+      }
+    }
+  ],
+  "每日抽": [
+    {
+      "text": "每日抽",
+      "ownText": "每日抽",
+      "className": "GgcKv",
+      "rect": {
+        "h": 17,
+        "w": 50,
+        "x": 142,
+        "y": 161
+      },
+      "style": {
+        "color": "rgb(170, 47, 23)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "16.64px",
+        "weight": "500",
+        "line": "16.64px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 17,
+        "clientWidth": 50,
+        "scrollHeight": 20,
+        "scrollWidth": 50
+      }
+    },
+    {
+      "text": "每日抽 提现",
+      "ownText": "",
+      "className": "kbEmz",
+      "rect": {
+        "h": 17,
+        "w": 109,
+        "x": 140,
+        "y": 161
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 17,
+        "clientWidth": 109,
+        "scrollHeight": 20,
+        "scrollWidth": 109
+      }
+    },
+    {
+      "text": "每日抽 提现",
+      "ownText": "",
+      "className": "DJhue",
+      "rect": {
+        "h": 17,
+        "w": 128,
+        "x": 131,
+        "y": 161
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 17,
+        "clientWidth": 128,
+        "scrollHeight": 20,
+        "scrollWidth": 128
+      }
+    },
+    {
+      "text": "每日抽 提现",
+      "ownText": "",
+      "className": " aWyLk",
+      "rect": {
+        "h": 42,
+        "w": 216,
+        "x": 87,
+        "y": 150
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily_bonus/daily_home/activityDespTitleBg.png?imageMogr2/%7CimageView2/q/50/format/webp\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -108.156, 0)",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 42,
+        "clientWidth": 216,
+        "scrollHeight": 42,
+        "scrollWidth": 216
+      }
+    }
+  ],
+  "提现": [
+    {
+      "text": "提现",
+      "ownText": "提现",
+      "className": "GgcKv",
+      "rect": {
+        "h": 17,
+        "w": 33,
+        "x": 214,
+        "y": 161
+      },
+      "style": {
+        "color": "rgb(170, 47, 23)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "16.64px",
+        "weight": "500",
+        "line": "16.64px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 17,
+        "clientWidth": 33,
+        "scrollHeight": 20,
+        "scrollWidth": 33
+      }
+    },
+    {
+      "text": "全额提现",
+      "ownText": "全额提现",
+      "className": "JQPhb",
+      "rect": {
+        "h": 18,
+        "w": 71,
+        "x": 60,
+        "y": 232
+      },
+      "style": {
+        "color": "rgb(12, 171, 19)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "17.68px",
+        "weight": "700",
+        "line": "17.68px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 18,
+        "clientWidth": 71,
+        "scrollHeight": 21,
+        "scrollWidth": 71
+      }
+    },
+    {
+      "text": "每日抽 提现",
+      "ownText": "",
+      "className": "kbEmz",
+      "rect": {
+        "h": 17,
+        "w": 109,
+        "x": 140,
+        "y": 161
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 17,
+        "clientWidth": 109,
+        "scrollHeight": 20,
+        "scrollWidth": 109
+      }
+    },
+    {
+      "text": "立即抽提现",
+      "ownText": "立即抽提现",
+      "className": "oo0Jn",
+      "rect": {
+        "h": 21,
+        "w": 102,
+        "x": 115,
+        "y": 433
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "20.8px",
+        "weight": "900",
+        "line": "20.8px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 21,
+        "clientWidth": 102,
+        "scrollHeight": 24,
+        "scrollWidth": 102
+      }
+    },
+    {
+      "text": "每日抽 提现",
+      "ownText": "",
+      "className": "DJhue",
+      "rect": {
+        "h": 17,
+        "w": 128,
+        "x": 131,
+        "y": 161
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 17,
+        "clientWidth": 128,
+        "scrollHeight": 20,
+        "scrollWidth": 128
+      }
+    }
+  ],
+  "全额提现": [
+    {
+      "text": "全额提现",
+      "ownText": "全额提现",
+      "className": "JQPhb",
+      "rect": {
+        "h": 18,
+        "w": 71,
+        "x": 60,
+        "y": 232
+      },
+      "style": {
+        "color": "rgb(12, 171, 19)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "17.68px",
+        "weight": "700",
+        "line": "17.68px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 18,
+        "clientWidth": 71,
+        "scrollHeight": 21,
+        "scrollWidth": 71
+      }
+    },
+    {
+      "text": "全额提现 分天打款 剩3992份",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 94
+      }
+    },
+    {
+      "text": "全额提现 分天打款 剩3992份",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 94
+      }
+    }
+  ],
+  "分天打款": [
+    {
+      "text": "分天打款",
+      "ownText": "分天打款",
+      "className": "D0x5E",
+      "rect": {
+        "h": 15,
+        "w": 58,
+        "x": 66,
+        "y": 271
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "14.56px",
+        "weight": "500",
+        "line": "14.56px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 15,
+        "clientWidth": 58,
+        "scrollHeight": 17,
+        "scrollWidth": 58
+      }
+    },
+    {
+      "text": "全额提现 分天打款 剩3992份",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 94
+      }
+    },
+    {
+      "text": "全额提现 分天打款 剩3992份",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 94
+      }
+    }
+  ],
+  "剩3992份": [
+    {
+      "text": "剩3992份",
+      "ownText": "剩3992份",
+      "className": "jsx-2413773085 text height-16",
+      "rect": {
+        "h": 15,
+        "w": 49,
+        "x": 90,
+        "y": 204
+      },
+      "style": {
+        "color": "rgb(255, 255, 249)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "11.44px",
+        "weight": "500",
+        "line": "14.56px",
+        "radius": "8.32px 8.32px 8.32px 0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 15,
+        "clientWidth": 49,
+        "scrollHeight": 15,
+        "scrollWidth": 49
+      }
+    },
+    {
+      "text": "剩3992份",
+      "ownText": "",
+      "className": "jsx-2413773085 daily-tips height-16 ",
+      "rect": {
+        "h": 17,
+        "w": 59,
+        "x": 85,
+        "y": 203
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "linear-gradient(-1deg, rgb(255, 49, 50) 0%, rgb(255, 99, 61) 100%)",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px 8.32px 8.32px 0px",
+        "pos": "absolute",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 15,
+        "clientWidth": 57,
+        "scrollHeight": 15,
+        "scrollWidth": 57
+      }
+    },
+    {
+      "text": "全额提现 分天打款 剩3992份",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 94
+      }
+    },
+    {
+      "text": "全额提现 分天打款 剩3992份",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 94
+      }
+    }
+  ],
+  "最高": [
+    {
+      "text": "6 元 最高",
+      "ownText": "",
+      "className": "eYgvV",
+      "rect": {
+        "h": 29,
+        "w": 34,
+        "x": 178,
+        "y": 225
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 34,
+        "scrollHeight": 35,
+        "scrollWidth": 42
+      }
+    },
+    {
+      "text": "3 元 最高",
+      "ownText": "",
+      "className": "eYgvV",
+      "rect": {
+        "h": 29,
+        "w": 34,
+        "x": 278,
+        "y": 317
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 34,
+        "scrollHeight": 35,
+        "scrollWidth": 42
+      }
+    },
+    {
+      "text": "6 元 最高 微信打款",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 150,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "6 元 最高 微信打款",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 150,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "3 元 最高 微信打款",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 250,
+        "y": 305
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    }
+  ],
+  "微信打款": [
+    {
+      "text": "6 元 最高 微信打款",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 150,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "6 元 最高 微信打款",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 150,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "8 元 分天 微信打款",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 150,
+        "y": 305
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "8 元 分天 微信打款",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 150,
+        "y": 305
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "3 元 最高 微信打款",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 250,
+        "y": 305
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    }
+  ],
+  "全场通用": [
+    {
+      "text": "9 元 满90元可用 全场通用",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 250,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "9 元 满90元可用 全场通用",
+      "ownText": "",
+      "className": "ftkWJ dYzhL",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 250,
+        "y": 212
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/platform_coupon.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    }
+  ],
+  "惊喜奖励": [
+    {
+      "text": "惊喜奖励",
+      "ownText": "惊喜奖励",
+      "className": "D0x5E",
+      "rect": {
+        "h": 15,
+        "w": 58,
+        "x": 66,
+        "y": 364
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "14.56px",
+        "weight": "500",
+        "line": "14.56px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 15,
+        "clientWidth": 58,
+        "scrollHeight": 17,
+        "scrollWidth": 58
+      }
+    },
+    {
+      "text": "惊喜奖励",
+      "ownText": "",
+      "className": "_i5f_",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 305
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    },
+    {
+      "text": "惊喜奖励",
+      "ownText": "",
+      "className": "ftkWJ",
+      "rect": {
+        "h": 82,
+        "w": 89,
+        "x": 50,
+        "y": 305
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "8.32px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 82,
+        "clientWidth": 89,
+        "scrollHeight": 82,
+        "scrollWidth": 89
+      }
+    }
+  ],
+  "立即抽提现": [
+    {
+      "text": "立即抽提现",
+      "ownText": "立即抽提现",
+      "className": "oo0Jn",
+      "rect": {
+        "h": 21,
+        "w": 102,
+        "x": 115,
+        "y": 433
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "20.8px",
+        "weight": "900",
+        "line": "20.8px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 21,
+        "clientWidth": 102,
+        "scrollHeight": 24,
+        "scrollWidth": 102
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": "SuOGV",
+      "rect": {
+        "h": 21,
+        "w": 160,
+        "x": 115,
+        "y": 433
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "matrix(1, 0, 0, 1, 0, 20.8)",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 21,
+        "clientWidth": 160,
+        "scrollHeight": 24,
+        "scrollWidth": 160
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": " yNLim",
+      "rect": {
+        "h": 67,
+        "w": 239,
+        "x": 75,
+        "y": 412
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily_bonus/daily_home_main/activityMainBtn.png?imageMogr2/%7CimageView2/q/50/format/webp\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 67,
+        "clientWidth": 239,
+        "scrollHeight": 67,
+        "scrollWidth": 239
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": "ga2Ww",
+      "rect": {
+        "h": 67,
+        "w": 239,
+        "x": 75,
+        "y": 412
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 67,
+        "clientWidth": 239,
+        "scrollHeight": 67,
+        "scrollWidth": 239
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": "yxNSK",
+      "rect": {
+        "h": 67,
+        "w": 388,
+        "x": 1,
+        "y": 412
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 67,
+        "clientWidth": 388,
+        "scrollHeight": 120,
+        "scrollWidth": 388
+      }
+    }
+  ],
+  "(可抽3次)": [
+    {
+      "text": "(可抽3次)",
+      "ownText": "(可抽3次)",
+      "className": "CffU7",
+      "rect": {
+        "h": 19,
+        "w": 57,
+        "x": 217,
+        "y": 434
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "400",
+        "line": "18.928px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 19,
+        "clientWidth": 57,
+        "scrollHeight": 19,
+        "scrollWidth": 57
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": "SuOGV",
+      "rect": {
+        "h": 21,
+        "w": 160,
+        "x": 115,
+        "y": 433
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "matrix(1, 0, 0, 1, 0, 20.8)",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 21,
+        "clientWidth": 160,
+        "scrollHeight": 24,
+        "scrollWidth": 160
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": " yNLim",
+      "rect": {
+        "h": 67,
+        "w": 239,
+        "x": 75,
+        "y": 412
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "url(\"https://funimg.pddpic.com/common/daily_bonus/daily_home_main/activityMainBtn.png?imageMogr2/%7CimageView2/q/50/format/webp\")",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 67,
+        "clientWidth": 239,
+        "scrollHeight": 67,
+        "scrollWidth": 239
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": "ga2Ww",
+      "rect": {
+        "h": 67,
+        "w": 239,
+        "x": 75,
+        "y": 412
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 67,
+        "clientWidth": 239,
+        "scrollHeight": 67,
+        "scrollWidth": 239
+      }
+    },
+    {
+      "text": "立即抽提现 (可抽3次)",
+      "ownText": "",
+      "className": "yxNSK",
+      "rect": {
+        "h": 67,
+        "w": 388,
+        "x": 1,
+        "y": 412
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 67,
+        "clientWidth": 388,
+        "scrollHeight": 120,
+        "scrollWidth": 388
+      }
+    }
+  ],
+  "实付满3元可抽奖": [
+    {
+      "text": "- 实付满3元可抽奖 -",
+      "ownText": "- 实付满3元可抽奖 -",
+      "className": "d392m",
+      "rect": {
+        "h": 12,
+        "w": 109,
+        "x": 141,
+        "y": 479
+      },
+      "style": {
+        "color": "rgb(104, 45, 9)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "12.48px",
+        "weight": "400",
+        "line": "12.48px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 12,
+        "clientWidth": 109,
+        "scrollHeight": 15,
+        "scrollWidth": 109
+      }
+    }
+  ],
+  "全额返": [
+    {
+      "text": "全额返",
+      "ownText": "",
+      "className": "jsx-3231617862 activity-name-area",
+      "rect": {
+        "h": 14,
+        "w": 41,
+        "x": 31,
+        "y": 582
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -20.2812, 0)",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 14,
+        "clientWidth": 41,
+        "scrollHeight": 17,
+        "scrollWidth": 41
+      }
+    },
+    {
+      "text": "全额返",
+      "ownText": "全额返",
+      "className": "jsx-632879682 common-text-fragment-for-text ",
+      "rect": {
+        "h": 17,
+        "w": 41,
+        "x": 31,
+        "y": 580
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 0,
+        "clientWidth": 0,
+        "scrollHeight": 0,
+        "scrollWidth": 0
+      }
+    },
+    {
+      "text": "全额返",
+      "ownText": "",
+      "className": "jsx-189561258 common-span-to-text-row-wrapper",
+      "rect": {
+        "h": 20,
+        "w": 41,
+        "x": 31,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 41,
+        "scrollHeight": 20,
+        "scrollWidth": 41
+      }
+    },
+    {
+      "text": "全额返",
+      "ownText": "",
+      "className": "jsx-189561258 render-normal-spans",
+      "rect": {
+        "h": 20,
+        "w": 41,
+        "x": 31,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 41,
+        "scrollHeight": 20,
+        "scrollWidth": 41
+      }
+    },
+    {
+      "text": "20 元 最多 全额返",
+      "ownText": "",
+      "className": "",
+      "rect": {
+        "h": 72,
+        "w": 75,
+        "x": 14,
+        "y": 530
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 72,
+        "clientWidth": 75,
+        "scrollHeight": 72,
+        "scrollWidth": 75
+      }
+    }
+  ],
+  "每日领钱": [
+    {
+      "text": "每日领钱",
+      "ownText": "",
+      "className": "jsx-3231617862 activity-name-area",
+      "rect": {
+        "h": 14,
+        "w": 54,
+        "x": 120,
+        "y": 582
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -27.0469, 0)",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 14,
+        "clientWidth": 54,
+        "scrollHeight": 17,
+        "scrollWidth": 54
+      }
+    },
+    {
+      "text": "每日领钱",
+      "ownText": "每日领钱",
+      "className": "jsx-632879682 common-text-fragment-for-text ",
+      "rect": {
+        "h": 17,
+        "w": 54,
+        "x": 120,
+        "y": 580
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 0,
+        "clientWidth": 0,
+        "scrollHeight": 0,
+        "scrollWidth": 0
+      }
+    },
+    {
+      "text": "每日领钱",
+      "ownText": "",
+      "className": "jsx-189561258 common-span-to-text-row-wrapper",
+      "rect": {
+        "h": 20,
+        "w": 54,
+        "x": 120,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 54,
+        "scrollHeight": 20,
+        "scrollWidth": 54
+      }
+    },
+    {
+      "text": "每日领钱",
+      "ownText": "",
+      "className": "jsx-189561258 render-normal-spans",
+      "rect": {
+        "h": 20,
+        "w": 54,
+        "x": 120,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 54,
+        "scrollHeight": 20,
+        "scrollWidth": 54
+      }
+    },
+    {
+      "text": "2 元 每日领钱",
+      "ownText": "",
+      "className": "",
+      "rect": {
+        "h": 72,
+        "w": 75,
+        "x": 110,
+        "y": 530
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 72,
+        "clientWidth": 75,
+        "scrollHeight": 72,
+        "scrollWidth": 75
+      }
+    }
+  ],
+  "招财猫": [
+    {
+      "text": "招财猫",
+      "ownText": "",
+      "className": "jsx-3231617862 activity-name-area",
+      "rect": {
+        "h": 14,
+        "w": 41,
+        "x": 223,
+        "y": 582
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -20.2812, 0)",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 14,
+        "clientWidth": 41,
+        "scrollHeight": 17,
+        "scrollWidth": 41
+      }
+    },
+    {
+      "text": "招财猫",
+      "ownText": "招财猫",
+      "className": "jsx-632879682 common-text-fragment-for-text ",
+      "rect": {
+        "h": 17,
+        "w": 41,
+        "x": 223,
+        "y": 580
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 0,
+        "clientWidth": 0,
+        "scrollHeight": 0,
+        "scrollWidth": 0
+      }
+    },
+    {
+      "text": "招财猫",
+      "ownText": "",
+      "className": "jsx-189561258 common-span-to-text-row-wrapper",
+      "rect": {
+        "h": 20,
+        "w": 41,
+        "x": 223,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 41,
+        "scrollHeight": 20,
+        "scrollWidth": 41
+      }
+    },
+    {
+      "text": "招财猫",
+      "ownText": "",
+      "className": "jsx-189561258 render-normal-spans",
+      "rect": {
+        "h": 20,
+        "w": 41,
+        "x": 223,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 41,
+        "scrollHeight": 20,
+        "scrollWidth": 41
+      }
+    },
+    {
+      "text": "招财猫",
+      "ownText": "",
+      "className": "",
+      "rect": {
+        "h": 72,
+        "w": 75,
+        "x": 205,
+        "y": 530
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 72,
+        "clientWidth": 75,
+        "scrollHeight": 72,
+        "scrollWidth": 75
+      }
+    }
+  ],
+  "兑换专区": [
+    {
+      "text": "兑换专区",
+      "ownText": "",
+      "className": "jsx-3231617862 activity-name-area",
+      "rect": {
+        "h": 14,
+        "w": 54,
+        "x": 311,
+        "y": 582
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -27.0469, 0)",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 14,
+        "clientWidth": 54,
+        "scrollHeight": 17,
+        "scrollWidth": 54
+      }
+    },
+    {
+      "text": "兑换专区",
+      "ownText": "兑换专区",
+      "className": "jsx-632879682 common-text-fragment-for-text ",
+      "rect": {
+        "h": 17,
+        "w": 54,
+        "x": 311,
+        "y": 580
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 0,
+        "clientWidth": 0,
+        "scrollHeight": 0,
+        "scrollWidth": 0
+      }
+    },
+    {
+      "text": "兑换专区",
+      "ownText": "",
+      "className": "jsx-189561258 common-span-to-text-row-wrapper",
+      "rect": {
+        "h": 20,
+        "w": 54,
+        "x": 311,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 54,
+        "scrollHeight": 20,
+        "scrollWidth": 54
+      }
+    },
+    {
+      "text": "兑换专区",
+      "ownText": "",
+      "className": "jsx-189561258 render-normal-spans",
+      "rect": {
+        "h": 20,
+        "w": 54,
+        "x": 311,
+        "y": 579
+      },
+      "style": {
+        "color": "rgb(255, 24, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "13.52px",
+        "weight": "500",
+        "line": "19.76px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 20,
+        "clientWidth": 54,
+        "scrollHeight": 20,
+        "scrollWidth": 54
+      }
+    },
+    {
+      "text": "兑换专区",
+      "ownText": "",
+      "className": "",
+      "rect": {
+        "h": 72,
+        "w": 75,
+        "x": 301,
+        "y": 530
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 72,
+        "clientWidth": 75,
+        "scrollHeight": 72,
+        "scrollWidth": 75
+      }
+    }
+  ],
+  "全部": [
+    {
+      "text": "全部",
+      "ownText": "全部",
+      "className": "xhihw py6XU current cartoon-widgets-parent-menu-ex-li",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 0,
+        "y": 619
+      },
+      "style": {
+        "color": "rgb(224, 46, 36)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "15.6px",
+        "weight": "700",
+        "line": "42.64px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 43,
+        "clientWidth": 58,
+        "scrollHeight": 43,
+        "scrollWidth": 58
+      }
+    }
+  ],
+  "医药": [
+    {
+      "text": "医药",
+      "ownText": "医药",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 58,
+        "y": 619
+      },
+      "style": {
+        "color": "rgb(21, 21, 22)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "15.6px",
+        "weight": "400",
+        "line": "42.64px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 43,
+        "clientWidth": 58,
+        "scrollHeight": 43,
+        "scrollWidth": 58
+      }
+    }
+  ],
+  "食品": [
+    {
+      "text": "食品",
+      "ownText": "食品",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 116,
+        "y": 619
+      },
+      "style": {
+        "color": "rgb(21, 21, 22)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "15.6px",
+        "weight": "400",
+        "line": "42.64px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 43,
+        "clientWidth": 58,
+        "scrollHeight": 43,
+        "scrollWidth": 58
+      }
+    }
+  ],
+  "手机": [
+    {
+      "text": "手机",
+      "ownText": "手机",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 175,
+        "y": 619
+      },
+      "style": {
+        "color": "rgb(21, 21, 22)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "15.6px",
+        "weight": "400",
+        "line": "42.64px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 43,
+        "clientWidth": 58,
+        "scrollHeight": 43,
+        "scrollWidth": 58
+      }
+    }
+  ],
+  "水果": [
+    {
+      "text": "水果",
+      "ownText": "水果",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 233,
+        "y": 619
+      },
+      "style": {
+        "color": "rgb(21, 21, 22)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "15.6px",
+        "weight": "400",
+        "line": "42.64px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 43,
+        "clientWidth": 58,
+        "scrollHeight": 43,
+        "scrollWidth": 58
+      }
+    }
+  ],
+  "百货": [
+    {
+      "text": "百货",
+      "ownText": "百货",
+      "className": "xhihw cartoon-widgets-parent-menu-ex-li",
+      "rect": {
+        "h": 43,
+        "w": 58,
+        "x": 291,
+        "y": 619
+      },
+      "style": {
+        "color": "rgb(21, 21, 22)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "15.6px",
+        "weight": "400",
+        "line": "42.64px",
+        "radius": "0px",
+        "pos": "relative",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "nowrap"
+      },
+      "fit": {
+        "clientHeight": 43,
+        "clientWidth": 58,
+        "scrollHeight": 43,
+        "scrollWidth": 58
+      }
+    }
+  ],
+  "拼单抽": [
+    {
+      "text": "拼单抽 提现",
+      "ownText": "",
+      "className": "jsx-3921242146 jsx-3911136615 cash-buy-btn",
+      "rect": {
+        "h": 29,
+        "w": 177,
+        "x": 8,
+        "y": 928
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 177,
+        "scrollHeight": 29,
+        "scrollWidth": 177
+      }
+    },
+    {
+      "text": "拼单抽 提现",
+      "ownText": "拼单抽提现",
+      "className": "jsx-3921242146 jsx-3911136615 left-btn",
+      "rect": {
+        "h": 29,
+        "w": 177,
+        "x": 8,
+        "y": 928
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(224, 46, 36)",
+        "bgImg": "none",
+        "font": "14.56px",
+        "weight": "400",
+        "line": "14.56px",
+        "radius": "4.16px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 177,
+        "scrollHeight": 29,
+        "scrollWidth": 177
+      }
+    },
+    {
+      "text": "拼单抽 提现",
+      "ownText": "",
+      "className": "jsx-3921242146 jsx-3911136615 cash-buy-btn",
+      "rect": {
+        "h": 29,
+        "w": 177,
+        "x": 198,
+        "y": 928
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 177,
+        "scrollHeight": 29,
+        "scrollWidth": 177
+      }
+    },
+    {
+      "text": "拼单抽 提现",
+      "ownText": "拼单抽提现",
+      "className": "jsx-3921242146 jsx-3911136615 left-btn",
+      "rect": {
+        "h": 29,
+        "w": 177,
+        "x": 198,
+        "y": 928
+      },
+      "style": {
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgb(224, 46, 36)",
+        "bgImg": "none",
+        "font": "14.56px",
+        "weight": "400",
+        "line": "14.56px",
+        "radius": "4.16px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 177,
+        "scrollHeight": 29,
+        "scrollWidth": 177
+      }
+    },
+    {
+      "text": "拼单抽 提现",
+      "ownText": "",
+      "className": "jsx-3921242146 jsx-3911136615 cash-buy-btn",
+      "rect": {
+        "h": 29,
+        "w": 177,
+        "x": 8,
+        "y": 1235
+      },
+      "style": {
+        "color": "rgb(102, 102, 102)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "font": "0px",
+        "weight": "400",
+        "line": "0px",
+        "radius": "0px",
+        "pos": "static",
+        "transform": "none",
+        "transition": "all 0s",
+        "whiteSpace": "normal"
+      },
+      "fit": {
+        "clientHeight": 29,
+        "clientWidth": 177,
+        "scrollHeight": 29,
+        "scrollWidth": 177
+      }
+    }
+  ],
+  "顶部": []
+}

@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinduoduo Sign-in Campaign Design System Preview</title>
+  <style>
+    :root {
+      --primary: #fe1842;
+      --primary-action: #e02e24;
+      --primary-gradient-end: #f62f30;
+      --cash-green: #0cab13;
+      --prize-green: #12b63b;
+      --cash-red: #ea3c32;
+      --warm-panel: #ffecd9;
+      --warm-panel-light: #fff3e6;
+      --canvas: #f4f4f4;
+      --surface-card: #ffffff;
+      --surface-chip: #ffe0e6;
+      --ink: #151516;
+      --body: #666666;
+      --muted: #9c9c9c;
+      --hairline: #eeeeee;
+      --on-primary: #ffffff;
+      --warning: #ff633d;
+      --overlay: rgba(0, 0, 0, .72);
+      --radius-xs: 2.08px;
+      --radius-sm: 4.16px;
+      --radius-md: 8.32px;
+      --radius-lg: 10.4px;
+      --radius-xl: 16.64px;
+      --space-xxs: 4.16px;
+      --space-xs: 8.32px;
+      --space-sm: 10.4px;
+      --space-md: 15.6px;
+      --space-lg: 20.8px;
+      --space-xl: 31.2px;
+      --section: 42px;
+      --font-sans: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-number: "Arial Black", "PingFang SC", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+    body {
+      margin: 0;
+      background: #161616;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 375px) minmax(420px, 1fr);
+      min-height: 100vh;
+      background: #ffffff;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .campaign-viewport {
+      width: 375px;
+      min-height: 100vh;
+      background: var(--canvas);
+      overflow: hidden;
+      border-right: 1px solid #d8d8d8;
+      position: sticky;
+      top: 0;
+      align-self: start;
+    }
+    .analysis-side {
+      min-width: 0;
+      background: #fffaf6;
+      border-left: 1px solid #f0d2c3;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .analysis-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 28px;
+      background: rgba(255, 250, 246, .94);
+      border-bottom: 1px solid #f0d2c3;
+      backdrop-filter: blur(10px);
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    .analysis-nav strong {
+      font-size: 15px;
+      color: var(--primary-action);
+    }
+    .analysis-nav-links {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      width: 100%;
+      max-width: 100%;
+    }
+    .analysis-nav a {
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #7b3a2f;
+      white-space: nowrap;
+    }
+    .analysis-nav a.active {
+      background: var(--primary-action);
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .analysis-section {
+      padding: var(--section) 32px;
+      border-bottom: 1px solid #f2d7ca;
+    }
+    .section-label {
+      margin-bottom: 10px;
+      color: var(--primary-action);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    .analysis-section h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+    .analysis-section p {
+      max-width: 760px;
+      color: #5c4039;
+      margin: 0 0 18px;
+    }
+    .campaign-top {
+      position: relative;
+      min-height: 619px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, var(--primary) 0 132px, #fee9df 132px 180px, #fee1db 180px 509px, var(--canvas) 509px);
+    }
+    .mobile-nav {
+      height: 77px;
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      padding: 0 8px 8px;
+      color: #fff;
+      background: var(--primary);
+    }
+    .back-mark {
+      width: 17px;
+      height: 17px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(45deg);
+      opacity: .9;
+      margin: 0 0 7px 2px;
+      flex: 0 0 auto;
+    }
+    .nav-title {
+      font-size: 18.72px;
+      line-height: 22.88px;
+      font-weight: 500;
+      white-space: nowrap;
+      margin-bottom: 3px;
+    }
+    .search-box {
+      margin-left: auto;
+      width: 203px;
+      height: 31px;
+      border-radius: 7px;
+      background: #fff;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 14px;
+      font-size: 15.6px;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,.04);
+    }
+    .search-mark {
+      width: 15px;
+      height: 15px;
+      background: url("https://funimg.pddpic.com/cartoon_activity/fruiter/cartoon_search_icon.png") center / contain no-repeat;
+      flex: 0 0 auto;
+    }
+    .more-button {
+      width: 20px;
+      height: 20px;
+      background: url("https://funimg.pddpic.com/common/daily_bonus/new_daily_home_search/right_icon.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp") center / contain no-repeat;
+      flex: 0 0 auto;
+      margin: 0 4px 6px 0;
+    }
+    .account-card {
+      position: absolute;
+      top: 79px;
+      left: 18px;
+      right: 18px;
+      height: 96px;
+      background: var(--surface-card);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 20px rgba(220, 35, 20, .13);
+      overflow: hidden;
+    }
+    .account-chip {
+      position: absolute;
+      top: 0;
+      left: 7px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      height: 22px;
+      padding: 0 11px 0 6px;
+      background: var(--surface-chip);
+      color: #aa2f17;
+      border-radius: 12.48px 0 8.32px;
+      font-size: 13.52px;
+    }
+    .avatar-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8c8c8c, #e8e8e8);
+    }
+    .money-row {
+      position: absolute;
+      top: 36px;
+      left: 68px;
+      right: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cash-mark {
+      width: 27px;
+      height: 25px;
+      background: url("https://funimg.pddpic.com/common/daily/daily_home/cashWeChatIcon.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp") center / contain no-repeat;
+    }
+    .rolling-money {
+      display: flex;
+      align-items: baseline;
+      color: var(--cash-red);
+      font-family: var(--font-number);
+      font-size: 41.6px;
+      line-height: 41.6px;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .digit-column {
+      display: inline-block;
+      width: 24px;
+      height: 42px;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+    .digit-list {
+      display: block;
+      transform: matrix3d(.981627,0,-.190809,0,0,1,0,0,.190809,0,.981627,0,0,0,0,1);
+      transition: transform .5s ease;
+    }
+    .money-unit {
+      font-family: var(--font-sans);
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 3px;
+    }
+    .more-cash {
+      display: inline-flex;
+      align-items: center;
+      height: 22px;
+      padding: 0 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(234, 60, 50, .42);
+      color: var(--cash-red);
+      font-size: 13.52px;
+      font-weight: 500;
+      white-space: nowrap;
+      background: #fff;
+    }
+    .prize-panel {
+      position: absolute;
+      top: 154px;
+      left: 0;
+      width: 390px;
+      height: 356px;
+      background: var(--warm-panel);
+      border-radius: var(--radius-xl) var(--radius-xl) var(--radius-lg) var(--radius-lg);
+      border: 1px solid #ffe1ce;
+    }
+    .panel-title {
+      position: absolute;
+      top: -4px;
+      left: 87px;
+      width: 216px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: #aa2f17;
+      font-size: 16.64px;
+      font-weight: 500;
+      background: url("https://funimg.pddpic.com/common/daily_bonus/daily_home/activityDespTitleBg.png?imageMogr2/%7CimageView2/q/50/format/webp") center / 100% 100% no-repeat;
+    }
+    .wechat-small {
+      width: 18px;
+      height: 17px;
+      background: url("https://funimg.pddpic.com/common/daily/daily_home/activityDespTitleWeChatIcon.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp") center / contain no-repeat;
+    }
+    .pool-chip {
+      position: absolute;
+      top: 1px;
+      right: 0;
+      height: 18px;
+      padding: 2px 10px 0;
+      color: #fff;
+      font-size: 13.52px;
+      font-weight: 500;
+      border-radius: 0 15.6px 0 4.16px;
+      background: linear-gradient(-2deg, #ff3132, #ff633d);
+    }
+    .machine-bg {
+      position: absolute;
+      top: 39px;
+      left: 15px;
+      width: 361px;
+      height: 212px;
+      background: url("https://funimg.pddpic.com/common/daily/daily_home/mainPartMachineBg.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp") center / 100% 100% no-repeat;
+      padding: 19px 35px;
+      display: grid;
+      grid-template-columns: repeat(3, 89px);
+      grid-template-rows: repeat(2, 82px);
+      gap: 11px 11px;
+    }
+    .reward-cell {
+      position: relative;
+      width: 89px;
+      height: 82px;
+      border-radius: var(--radius-md);
+      background: url("https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png") center / 100% 100% no-repeat;
+      color: var(--cash-green);
+      overflow: visible;
+      text-align: center;
+      padding: 12px 5px 8px;
+    }
+    .reward-cell.coupon {
+      background-image: url("https://funimg.pddpic.com/common/daily/new_daily/platform_coupon.png.slim.png");
+      color: #6a2f11;
+    }
+    .remain-chip {
+      position: absolute;
+      top: -9px;
+      right: -5px;
+      height: 17px;
+      padding: 1px 6px 0;
+      color: #fff;
+      font-size: 11.44px;
+      font-weight: 500;
+      background: linear-gradient(-1deg, #ff3132, #ff633d);
+      border-radius: 8.32px 8.32px 8.32px 0;
+    }
+    .reward-main {
+      margin: 7px 0 0;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .reward-amount {
+      margin: 0;
+      font-family: var(--font-number);
+      font-size: 31px;
+      line-height: 42px;
+      height: 44px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+    .reward-sub {
+      position: absolute;
+      left: 6px;
+      right: 6px;
+      bottom: 11px;
+      min-height: 14px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      text-shadow: 0 1px 2px rgba(2, 102, 22, .45);
+    }
+    .reward-cell.coupon .reward-sub {
+      color: #6a2f11;
+      text-shadow: none;
+    }
+    .gift-symbol {
+      width: 26px;
+      height: 26px;
+      margin: 13px auto 0;
+      background: url("https://funimg.pddpic.com/common/daily/new_daily/surprise_reward.png.slim.png") center / contain no-repeat;
+    }
+    .art-cta-wrap {
+      position: absolute;
+      top: 258px;
+      left: 1px;
+      width: 388px;
+      height: 67px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .art-cta {
+      position: relative;
+      width: 239px;
+      height: 67px;
+      color: #fff;
+      background: url("https://funimg.pddpic.com/common/daily_bonus/daily_home_main/activityMainBtn.png?imageMogr2/%7CimageView2/q/50/format/webp") center / 100% 100% no-repeat;
+    }
+    .art-cta-label {
+      position: absolute;
+      top: 17px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 4px;
+      line-height: 20.8px;
+      white-space: nowrap;
+    }
+    .art-cta-label strong {
+      font-size: 20.8px;
+      font-weight: 900;
+    }
+    .art-cta-label span {
+      font-size: 14.56px;
+      font-weight: 500;
+    }
+    .gesture {
+      position: absolute;
+      right: -48px;
+      bottom: -52px;
+      width: 104px;
+      height: 104px;
+      background: url("https://funimg.pddpic.com/common/daily/main_btn_handle_finger.apng") center / contain no-repeat;
+    }
+    .draw-note {
+      position: absolute;
+      top: 321px;
+      left: 0;
+      width: 390px;
+      text-align: center;
+      color: #b88166;
+      font-size: 11px;
+    }
+    .mission-strip {
+      position: absolute;
+      top: 520px;
+      left: 0;
+      width: 390px;
+      height: 88px;
+      display: grid;
+      grid-template-columns: repeat(4, 75px);
+      gap: 20px;
+      padding: 10px 15px;
+      border-radius: var(--radius-lg);
+      background: #fff;
+    }
+    .mission {
+      position: relative;
+      height: 72px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      background: #fff;
+    }
+    .mission-art {
+      width: 71px;
+      height: 44px;
+      margin: 2px auto 4px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .mission:nth-child(1) .mission-art { background-image: url("https://funimg.pddpic.com/common/daily_bonus/a7fca165-4808-44a8-90cc-e6a63a25a42e.png"); }
+    .mission:nth-child(2) .mission-art { background-image: url("https://funimg.pddpic.com/common/daily/source/daily_money.png"); }
+    .mission:nth-child(3) .mission-art { background-image: url("https://funimg.pddpic.com/common/daily_bonus/daily_home/ManekiNekoCat.png"); }
+    .mission:nth-child(4) .mission-art { background-image: url("https://funimg.pddpic.com/common/daily_bonus/daily_home/ExchangeZone.png"); }
+    .mission-label {
+      color: #ff1818;
+      font-size: 13.52px;
+      font-weight: 500;
+      line-height: 19.76px;
+      white-space: nowrap;
+    }
+    .category-tabs {
+      position: absolute;
+      top: 619px;
+      left: 0;
+      width: 375px;
+      height: 43px;
+      display: flex;
+      overflow-x: auto;
+      background: #fff;
+      scrollbar-width: none;
+    }
+    .category-tabs button {
+      width: 58px;
+      height: 43px;
+      flex: 0 0 58px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 15.6px;
+      font-weight: 400;
+    }
+    .category-tabs button.selected {
+      color: var(--primary-action);
+      font-weight: 700;
+      border-bottom: 2px solid var(--primary-action);
+    }
+    .product-feed {
+      margin-top: 662px;
+      display: grid;
+      grid-template-columns: repeat(2, 193px);
+      gap: 4px 0;
+      background: #f2f2f2;
+      min-height: 650px;
+    }
+    .product-card {
+      width: 193px;
+      height: 303px;
+      background: #fff;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      position: relative;
+    }
+    .product-card img {
+      width: 193px;
+      height: 193px;
+      display: block;
+      object-fit: cover;
+    }
+    .product-copy {
+      padding: 5px 8px 0;
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 17px;
+      height: 38px;
+      overflow: hidden;
+    }
+    .goods-tags {
+      height: 16px;
+      padding: 0 8px;
+      color: var(--muted);
+      font-size: 12.48px;
+      line-height: 13.52px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      height: 18px;
+      padding: 0 8px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .price {
+      color: var(--primary-action);
+      font-size: 13.52px;
+      line-height: 17.68px;
+      font-weight: 700;
+    }
+    .sold {
+      color: var(--ink);
+      font-size: 12.48px;
+      line-height: 13.52px;
+    }
+    .product-cta {
+      width: 177px;
+      height: 29px;
+      margin: 5px 8px 0;
+      border-radius: var(--radius-sm);
+      background: var(--primary-action);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      font-size: 14.56px;
+      line-height: 14.56px;
+      white-space: nowrap;
+    }
+    .product-cta .mini-wechat {
+      width: 15px;
+      height: 15px;
+      background: url("https://funimg.pddpic.com/common/daily_bonus/lottery_order/wechat1.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp") center / contain no-repeat;
+    }
+    .more-popover-sample {
+      width: 92px;
+      height: 119px;
+      background: #fff;
+      border-radius: var(--radius-sm);
+      box-shadow: 0 5px 18px rgba(80, 30, 20, .16);
+      overflow: hidden;
+      font-size: 14.56px;
+      color: var(--ink);
+    }
+    .more-row {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    .sound-row {
+      gap: 8px;
+    }
+    .switch {
+      width: 30px;
+      height: 16px;
+      border-radius: 99px;
+      background: #49d267;
+      position: relative;
+    }
+    .switch::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .rules-demo {
+      position: relative;
+      width: 302px;
+      min-height: 330px;
+      margin: 0 auto;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 12px 40px rgba(0,0,0,.18);
+      padding: 26px 20px 22px;
+    }
+    .rules-demo h3 {
+      margin: 0 0 18px;
+      text-align: center;
+      font-size: 18px;
+    }
+    .rules-demo p {
+      margin: 0 0 12px;
+      color: #222;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .close-ring {
+      position: absolute;
+      top: -48px;
+      right: -14px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.9);
+    }
+    .close-ring::before,
+    .close-ring::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 14px;
+      width: 16px;
+      height: 1px;
+      background: #fff;
+    }
+    .close-ring::before { transform: rotate(45deg); }
+    .close-ring::after { transform: rotate(-45deg); }
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .sample-card {
+      background: #fff;
+      border: 1px solid #f0d2c3;
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      min-width: 0;
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .swatch {
+      border-radius: var(--radius-md);
+      border: 1px solid #f0d2c3;
+      background: #fff;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .swatch-color {
+      height: 54px;
+      background: var(--primary);
+    }
+    .swatch-meta {
+      padding: 8px;
+      font-size: 11px;
+      color: #5c4039;
+      word-break: break-word;
+    }
+    .type-samples {
+      display: grid;
+      gap: 12px;
+    }
+    .type-row {
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: #fff;
+      border: 1px solid #f0d2c3;
+    }
+    .type-display {
+      color: var(--cash-red);
+      font-family: var(--font-number);
+      font-size: 41.6px;
+      line-height: 41.6px;
+    }
+    .responsive-note {
+      display: grid;
+      grid-template-columns: 375px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .mini-viewport {
+      width: 375px;
+      border: 1px solid #f0d2c3;
+      background: #f4f4f4;
+      overflow: hidden;
+    }
+    .mini-viewport .category-tabs { position: static; }
+    .go-top-sample {
+      width: 44px;
+      height: 44px;
+      background: url("https://pinduoduoimg.yangkeduo.com/cartoon_activity/fruiter/cartoon-widgets-gotop.png") center / 100% 100% no-repeat;
+      position: relative;
+    }
+    .loading-sample {
+      width: 35px;
+      height: 35px;
+      background: url("https://pinduoduoimg.yangkeduo.com/cartoon_activity/fruiter/cartoon-widgets-loading.png") center / 100% 100% no-repeat;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 900px) {
+      .page-shell {
+        grid-template-columns: 1fr;
+      }
+      .campaign-viewport {
+        position: relative;
+        top: auto;
+        margin: 0 auto;
+        border-right: 0;
+      }
+      .analysis-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 14px 16px;
+      }
+      .analysis-nav-links {
+        gap: 8px;
+        max-width: 100%;
+      }
+      .analysis-nav a {
+        padding: 7px 9px;
+      }
+      .analysis-section {
+        padding: 36px 16px;
+      }
+      .component-grid,
+      .responsive-note,
+      .swatches {
+        grid-template-columns: 1fr;
+      }
+      .mini-viewport {
+        width: min(375px, 100%);
+        overflow: hidden;
+      }
+      .mini-viewport .category-tabs {
+        width: 100%;
+      }
+      .mini-viewport .product-feed {
+        grid-template-columns: repeat(2, 187.5px);
+      }
+      .mini-viewport .product-card,
+      .mini-viewport .product-card img {
+        width: 187.5px;
+      }
+    }
+    @media (max-width: 390px) {
+      .campaign-viewport {
+        width: 375px;
+        transform-origin: top center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <main class="campaign-viewport" aria-label="Observed mobile campaign system">
+      <section class="campaign-top">
+        <div class="mobile-nav">
+          <div class="back-mark" aria-hidden="true"></div>
+          <div class="nav-title">签到领现金</div>
+          <div class="search-box"><span class="search-mark"></span><span>活动推荐关键词</span></div>
+          <div class="more-button" aria-hidden="true"></div>
+        </div>
+        <div class="account-card">
+          <div class="account-chip"><span class="avatar-dot"></span><span>我的现金账户</span></div>
+          <div class="money-row">
+            <span class="cash-mark"></span>
+            <div class="rolling-money" aria-label="redacted cash amount">
+              <span class="digit-column"><span class="digit-list">0<br>9<br>8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</span></span>
+              <span class="digit-column"><span class="digit-list">0<br>9<br>8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</span></span>
+              <span>.</span>
+              <span class="digit-column"><span class="digit-list">0<br>9<br>8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</span></span>
+              <span class="digit-column"><span class="digit-list">0<br>9<br>8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</span></span>
+              <span class="money-unit">元</span>
+            </div>
+            <span class="more-cash">领更多现金</span>
+          </div>
+        </div>
+        <div class="prize-panel">
+          <div class="panel-title">每日抽 <span class="wechat-small"></span> 提现</div>
+          <div class="pool-chip">奖池已更新</div>
+          <div class="machine-bg">
+            <div class="reward-cell">
+              <span class="remain-chip">剩3992份</span>
+              <div class="reward-main">全额提现</div>
+              <div class="reward-sub">分天打款</div>
+            </div>
+            <div class="reward-cell">
+              <div class="reward-amount">6元</div>
+              <div class="reward-sub">微信打款</div>
+            </div>
+            <div class="reward-cell coupon">
+              <div class="reward-amount">9元</div>
+              <div class="reward-sub">全场通用</div>
+            </div>
+            <div class="reward-cell">
+              <div class="gift-symbol"></div>
+              <div class="reward-sub">惊喜奖励</div>
+            </div>
+            <div class="reward-cell">
+              <div class="reward-amount">8元</div>
+              <div class="reward-sub">微信打款</div>
+            </div>
+            <div class="reward-cell">
+              <div class="reward-amount">3元</div>
+              <div class="reward-sub">微信打款</div>
+            </div>
+          </div>
+          <div class="art-cta-wrap">
+            <div class="art-cta">
+              <div class="art-cta-label"><strong>立即抽提现</strong><span>(可抽3次)</span></div>
+              <div class="gesture"></div>
+            </div>
+          </div>
+          <div class="draw-note">- 实付满3元可抽奖 -</div>
+        </div>
+        <div class="mission-strip">
+          <div class="mission"><div class="mission-art"></div><div class="mission-label">全额返</div></div>
+          <div class="mission"><div class="mission-art"></div><div class="mission-label">每日领钱</div></div>
+          <div class="mission"><div class="mission-art"></div><div class="mission-label">招财猫</div></div>
+          <div class="mission"><div class="mission-art"></div><div class="mission-label">兑换专区</div></div>
+        </div>
+        <div class="category-tabs" role="tablist" aria-label="Campaign categories">
+          <button class="selected" type="button">全部</button>
+          <button type="button">医药</button>
+          <button type="button">食品</button>
+          <button type="button">手机</button>
+          <button type="button">水果</button>
+          <button type="button">百货</button>
+        </div>
+        <div class="product-feed">
+          <article class="product-card">
+            <img alt="" src="https://img-2.pddpic.com/mms-goods-image/2025-12-16/94ccb07c-e169-41dd-a676-6da75aa5bbc4.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp" />
+            <div class="product-copy">活动商品标题两行展示，超过隐藏保持密度</div>
+            <div class="goods-tags">正品险 退货包运费</div>
+            <div class="price-row"><span class="price">¥19.8</span><span class="sold">本店已拼3.9万件</span></div>
+            <div class="product-cta"><span>拼单抽</span><span class="mini-wechat"></span><span>提现</span></div>
+          </article>
+          <article class="product-card">
+            <img alt="" src="https://img-2.pddpic.com/mms-material-img/2025-05-12/667f161c-0cc7-4715-ad2e-3404375b8826.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp" />
+            <div class="product-copy">双列商品卡使用方图和红色底部行动</div>
+            <div class="goods-tags">旗舰店 品牌热销</div>
+            <div class="price-row"><span class="price">¥12.9</span><span class="sold">已拼4.7万+件</span></div>
+            <div class="product-cta"><span>拼单抽</span><span class="mini-wechat"></span><span>提现</span></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="analysis-side">
+      <nav class="analysis-nav">
+        <strong>拼多多签到活动页设计系统</strong>
+        <div class="analysis-nav-links">
+          <a href="#colors" class="active">Colors</a>
+          <a href="#typography">Typography</a>
+          <a href="#components">Components</a>
+          <a href="#responsive">Responsive</a>
+          <a href="#known-gaps">Known Gaps</a>
+        </div>
+      </nav>
+
+      <section class="analysis-section" id="overview">
+        <div class="section-label">00 - System Preview</div>
+        <h2>移动活动页画布，不是普通落地页</h2>
+        <p>左侧预览复刻观察到的 375px 活动稿结构：红色顶区、现金账户、抽提现奖池、任务入口、分类和双列商品流。金额和个人参数已脱敏，只保留样式结构。</p>
+      </section>
+
+      <section class="analysis-section" id="colors">
+        <div class="section-label">01 - Color Palette</div>
+        <h2>红色转化，绿色现金，奶油奖池</h2>
+        <div class="swatches">
+          <div class="swatch"><div class="swatch-color" style="background:#fe1842"></div><div class="swatch-meta">primary<br>#fe1842</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#e02e24"></div><div class="swatch-meta">primary-action<br>#e02e24</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#0cab13"></div><div class="swatch-meta">cash-green<br>#0cab13</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ffecd9"></div><div class="swatch-meta">warm-panel<br>#ffecd9</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#f4f4f4"></div><div class="swatch-meta">canvas<br>#f4f4f4</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta">surface-card<br>#ffffff</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#151516"></div><div class="swatch-meta">ink<br>#151516</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#9c9c9c"></div><div class="swatch-meta">muted<br>#9c9c9c</div></div>
+        </div>
+      </section>
+
+      <section class="analysis-section" id="typography">
+        <div class="section-label">02 - Typography Scale</div>
+        <h2>金额大，说明密，动作短</h2>
+        <div class="type-samples">
+          <div class="type-row"><div class="type-display">XX.XX元</div><p>Display: 41.6px number roller style, source used PDDSansStd06-Regular.</p></div>
+          <div class="type-row"><h3 style="margin:0;font-size:18.72px;line-height:22.88px;">签到领现金</h3><p>Heading: 18.72px, 500, top navigation title.</p></div>
+          <div class="type-row"><p style="font-size:13.52px;line-height:17.68px;margin:0;">商品信息、账户标签、任务说明使用 13.52px 左右，密度高。</p></div>
+          <div class="type-row"><span style="font-size:14.56px;line-height:14.56px;color:#fff;background:#e02e24;border-radius:4.16px;padding:8px 22px;">拼单抽提现</span></div>
+        </div>
+      </section>
+
+      <section class="analysis-section" id="components">
+        <div class="section-label">03 - Component System</div>
+        <h2>入口、奖池、任务、商品流</h2>
+        <div class="component-grid">
+          <div class="sample-card">
+            <div class="section-label">03A - More Popover</div>
+            <div class="more-popover-sample">
+              <div class="more-row">活动规则</div>
+              <div class="more-row">打款明细</div>
+              <div class="more-row sound-row"><span>音效</span><span class="switch"></span></div>
+            </div>
+          </div>
+          <div class="sample-card">
+            <div class="section-label">03B - Rules Modal</div>
+            <div style="background:var(--overlay);padding:58px 12px 20px;border-radius:10px;">
+              <div class="rules-demo">
+                <div class="close-ring"></div>
+                <h3>活动规则</h3>
+                <p>说明卡使用白底、深遮罩和外浮关闭按钮。正文是密集条款，可在卡内滚动。</p>
+                <p>不要把这个弹窗改成底部抽屉，它在源页面里是居中卡片。</p>
+              </div>
+            </div>
+          </div>
+          <div class="sample-card">
+            <div class="section-label">03C - Motion Tokens</div>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <div class="loading-sample" aria-hidden="true"></div>
+              <div class="go-top-sample" aria-hidden="true"></div>
+              <p style="margin:0;">loading: 1s linear spin; go-top: bottom/opacity transition.</p>
+            </div>
+          </div>
+          <div class="sample-card">
+            <div class="section-label">03D - Text Fit</div>
+            <p>实测分类、商品 CTA、奖励金额、任务标签均保持单行。商品 CTA 宽 177px，文本拆成“拼单抽 + 微信图标 + 提现”。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="analysis-section" id="responsive">
+        <div class="section-label">04 - Responsive Behavior</div>
+        <h2>固定 375px 移动画布，宽屏居中</h2>
+        <div class="responsive-note">
+          <div class="mini-viewport">
+            <div class="category-tabs" role="presentation">
+              <button class="selected" type="button">全部</button>
+              <button type="button">医药</button>
+              <button type="button">食品</button>
+              <button type="button">手机</button>
+              <button type="button">水果</button>
+              <button type="button">百货</button>
+            </div>
+          </div>
+          <p>观察到的页面在 390px 视口中文档宽度为 375px，分类横向滚动，商品保持两列。没有观察到桌面重排，宽屏中应保持移动稿比例。</p>
+        </div>
+      </section>
+
+      <section class="analysis-section" id="known-gaps">
+        <div class="section-label">05 - Known Gaps</div>
+        <h2>没有触发会改账户或交易状态的动作</h2>
+        <p>未点击抽奖、打款明细、领取任务、商品购买和拼单 CTA。账号余额、完整分享参数、个人打款明细都不写入预览。商品流是个性化内容，后续可能变化。</p>
+      </section>
+    </aside>
+  </div>
+
+  <script>
+    const navLinks = Array.from(document.querySelectorAll(".analysis-nav a"));
+    function setActive(hash) {
+      navLinks.forEach((link) => {
+        const active = link.getAttribute("href") === hash;
+        link.classList.toggle("active", active);
+        if (active) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      });
+    }
+    function setActiveFromHash() {
+      setActive(window.location.hash || "#colors");
+    }
+    navLinks.forEach((link) => link.addEventListener("click", () => {
+      const nextHash = link.getAttribute("href");
+      if (nextHash && nextHash.startsWith("#")) setActive(nextHash);
+      window.setTimeout(setActiveFromHash, 0);
+    }));
+    window.addEventListener("hashchange", setActiveFromHash);
+    setActiveFromHash();
+  </script>
+</body>
+</html>

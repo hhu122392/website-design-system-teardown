@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinduoduo Newcomer 0.01 Module Design Preview</title>
+  <style>
+    :root {
+      --primary: #e63e3e;
+      --action-start: #ff542e;
+      --action-end: #ff1808;
+      --price-red: #ef1407;
+      --pdd-red: #e02e24;
+      --timer-red: #ff3d34;
+      --orange: #ff6310;
+      --surface-card: #ffffff;
+      --canvas: #fff7f2;
+      --ink: #151516;
+      --body: #666666;
+      --muted: #9c9c9c;
+      --coupon-text: #9d3a00;
+      --on-primary: #ffffff;
+      --hairline: #ffd8ce;
+      --radius-sm: 3.41333px;
+      --radius-md: 6.82667px;
+      --radius-lg: 13.6533px;
+      --radius-pill: 34.1333px;
+      --space-xs: 6.82667px;
+      --space-sm: 13.6533px;
+      --space-md: 20.48px;
+      --space-lg: 34.1333px;
+      --section: 68px;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      --shadow-cta: rgba(253, 99, 99, 0.3) 0 3.41333px 17.0667px 0;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--canvas);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(360px, 680px) minmax(320px, 1fr);
+      align-items: start;
+      min-width: 0;
+    }
+    .module-stage {
+      position: sticky;
+      top: 0;
+      min-height: 100vh;
+      padding: 24px 20px;
+      background: var(--primary);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: hidden;
+      min-width: 0;
+    }
+    .analysis {
+      padding: 32px;
+      min-width: 0;
+    }
+    .analysis-nav {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      margin: -32px -32px 24px;
+      padding: 16px 32px;
+      background: rgba(255, 247, 242, 0.94);
+      border-bottom: 1px solid var(--hairline);
+      backdrop-filter: blur(10px);
+    }
+    .analysis-nav strong {
+      display: block;
+      color: var(--pdd-red);
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+    }
+    .analysis-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .analysis-nav a {
+      text-decoration: none;
+      border: 1px solid var(--hairline);
+      background: #fff;
+      color: var(--body);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 600;
+    }
+    .analysis-nav a.active {
+      background: var(--pdd-red);
+      border-color: var(--pdd-red);
+      color: #fff;
+    }
+
+    .campaign-band {
+      width: min(640px, 100%);
+      min-width: 0;
+      flex: 0 1 640px;
+      background: var(--primary);
+      padding: 0 13px 20px;
+      overflow: hidden;
+    }
+    .newcomer-card {
+      width: 613px;
+      max-width: 100%;
+      min-width: 0;
+      margin: 0 auto;
+      border-radius: var(--radius-lg);
+      background: var(--surface-card);
+      padding: 20.48px 13.6533px 20.48px;
+      overflow: hidden;
+    }
+    .title-row {
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 17px;
+    }
+    .title-asset {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+    }
+    .title-icon {
+      width: 31px;
+      height: 38px;
+      flex: 0 0 auto;
+      background: url("https://funimg.pddpic.com/lego/9k9/1a7463a2-dacb-4561-8732-ac776763f71d.png.slim.png?imageView2/2/w/1300/q/70/format/webp") 0 0 / 100% 100% no-repeat;
+    }
+    .title-wordmark {
+      width: 266px;
+      height: 38px;
+      max-width: calc(100vw - 220px);
+      background: url("https://funimg.pddpic.com/lego/9k9/d1bfbf4e-667f-4fbf-9dd4-1382e793cb4d.png.slim.png?imageView2/2/w/1300/q/70/format/webp") 0 0 / 100% 100% no-repeat;
+    }
+    .countdown {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+    .countdown-label {
+      color: var(--muted);
+      font-size: 22.1867px;
+      line-height: 25.6px;
+      font-weight: 400;
+    }
+    .timer-box {
+      min-width: 29px;
+      height: 29px;
+      padding: 0 4px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(136deg, var(--orange), #ff3838);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20.48px;
+      font-weight: 500;
+      line-height: 29.0133px;
+      will-change: transform, filter;
+    }
+    .timer-box.timer-tick {
+      animation: timer-tick 180ms cubic-bezier(.2, .8, .2, 1);
+    }
+    .timer-box.ms {
+      min-width: 17px;
+      padding: 0 3px;
+    }
+    .timer-sep {
+      color: var(--timer-red);
+      font-size: 18.7733px;
+      line-height: 28.16px;
+      font-weight: 500;
+    }
+    @keyframes timer-tick {
+      0% {
+        transform: translateY(-2px) scale(1.06);
+        filter: brightness(1.12);
+      }
+      45% {
+        transform: translateY(1px) scale(0.97);
+        filter: brightness(0.98);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        filter: brightness(1);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .timer-box.timer-tick {
+        animation: none;
+      }
+    }
+    .product-rail {
+      width: 599px;
+      max-width: 100%;
+      min-width: 0;
+      height: 281px;
+      background: #fff;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      overflow: hidden;
+    }
+    .rail-track {
+      width: 1934px;
+      height: 281px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .product-card {
+      width: 174px;
+      height: 281px;
+      flex: 0 0 174px;
+      color: var(--body);
+      white-space: nowrap;
+    }
+    .product-card img {
+      display: block;
+      width: 174px;
+      height: 174px;
+      object-fit: cover;
+      border-radius: 6px 6px 0 0;
+      background: #fff3ee;
+    }
+    .subsidy-ribbon {
+      position: relative;
+      width: 174px;
+      height: 31px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 20.48px;
+      line-height: 30.72px;
+      font-weight: 600;
+      background: url("https://promotion.pddpic.com/promo/promo/lower/476bf3be-e79c-4889-a8eb-203c12f95505.png.slim.png?imageView2/2/w/1300/q/70/format/webp") 0 0 / 100% 100% no-repeat;
+    }
+    .subsidy-ribbon::after {
+      content: "";
+      width: 20px;
+      height: 19px;
+      margin-left: 5px;
+      background: url("https://promotion.pddpic.com/promo/promo/lower/edecb4cb-3d3d-4495-82c9-868e72c3ea4a.png.slim.png?imageView2/2/w/1300/q/70/format/webp") 0 0 / 100% 100% no-repeat;
+    }
+    .product-title {
+      width: 174px;
+      height: 32px;
+      overflow: hidden;
+      color: var(--ink);
+      font-size: 22.1867px;
+      font-weight: 400;
+      line-height: 32.4267px;
+      white-space: nowrap;
+    }
+    .price-row {
+      width: 174px;
+      height: 39px;
+      overflow: visible;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0;
+      color: var(--pdd-red);
+      white-space: nowrap;
+    }
+    .price-row span { white-space: nowrap; }
+    .price-label {
+      font-size: 20.48px;
+      line-height: 27.3067px;
+      font-weight: 500;
+      margin-right: 2px;
+    }
+    .currency {
+      font-size: 20.48px;
+      line-height: 20.48px;
+      font-weight: 500;
+    }
+    .price-main {
+      color: var(--price-red);
+      font-size: 34.1333px;
+      line-height: 34.1333px;
+      font-weight: 600;
+    }
+    .price-decimal {
+      color: var(--price-red);
+      font-size: 23.8933px;
+      line-height: 23.8933px;
+      font-weight: 600;
+    }
+    .more-card {
+      width: 65px;
+      height: 154px;
+      margin-left: 3px;
+      border-radius: var(--radius-md);
+      background: #fff;
+      color: #58595b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22.1867px;
+      line-height: 33.28px;
+      white-space: normal;
+      text-align: center;
+    }
+    .cta-wrap {
+      width: 512px;
+      max-width: calc(100% - 54px);
+      height: 68px;
+      margin: 10px auto 0;
+      position: relative;
+    }
+    .primary-cta {
+      width: 100%;
+      height: 68px;
+      border: 0;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(90deg, var(--action-start), var(--action-end));
+      box-shadow: var(--shadow-cta);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      font-family: var(--font-sans);
+      font-size: 29.0133px;
+      line-height: 43.52px;
+      font-weight: 600;
+      cursor: default;
+    }
+    .primary-cta span { white-space: nowrap; }
+    .limit-pill {
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: #ffe8c9;
+      color: var(--coupon-text);
+      font-size: 18.7733px;
+      line-height: 1;
+      font-weight: 500;
+      padding: 0 8px;
+      white-space: nowrap;
+    }
+
+    .section {
+      padding: 52px 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+    .section-label {
+      color: var(--pdd-red);
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .section h1,
+    .section h2,
+    .section h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+    .section h1 {
+      font-size: 42px;
+      line-height: 1.08;
+    }
+    .section h2 {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .section p {
+      color: var(--body);
+      margin: 0 0 18px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .sample-card {
+      background: #fff;
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      padding: 18px;
+      overflow: hidden;
+    }
+    .swatch {
+      background: #fff;
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .swatch-color { height: 64px; }
+    .swatch-meta {
+      padding: 10px;
+      font-size: 12px;
+      color: var(--body);
+      line-height: 1.5;
+    }
+    .type-row {
+      border-bottom: 1px solid var(--hairline);
+      padding: 14px 0;
+    }
+    .type-row:last-child { border-bottom: 0; }
+    .mini-rail {
+      max-width: 100%;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid var(--hairline);
+    }
+    .mini-rail .rail-track {
+      transform: scale(0.74);
+      transform-origin: left top;
+      height: 276px;
+    }
+    .metric-list {
+      display: grid;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--body);
+      line-height: 1.5;
+    }
+    .metric-list strong { color: var(--ink); }
+    .gap-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--body);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .shell { grid-template-columns: 1fr; }
+      .module-stage {
+        position: static;
+        min-height: auto;
+        width: 100%;
+      }
+      .analysis { padding: 24px 18px; }
+      .analysis-nav { margin: -24px -18px 18px; padding: 14px 18px; }
+    }
+    @media (max-width: 660px) {
+      .module-stage { padding: 0; }
+      .campaign-band {
+        width: 100%;
+        flex-basis: auto;
+        padding: 16px 8px 18px;
+      }
+      .newcomer-card {
+        width: 100%;
+        padding: 14px 8px 16px;
+      }
+      .title-row {
+        height: auto;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .title-icon { width: 25px; height: 31px; }
+      .title-wordmark {
+        width: 214px;
+        height: 31px;
+        max-width: calc(100vw - 185px);
+      }
+      .countdown-label { font-size: 16px; line-height: 22px; }
+      .timer-box {
+        min-width: 24px;
+        height: 24px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .timer-box.ms { min-width: 15px; }
+      .timer-sep { font-size: 15px; line-height: 22px; }
+      .product-rail {
+        width: 100%;
+        height: 218px;
+      }
+      .rail-track {
+        transform: scale(0.775);
+        transform-origin: left top;
+      }
+      .cta-wrap {
+        width: calc(100% - 42px);
+        height: 58px;
+      }
+      .primary-cta {
+        height: 58px;
+        font-size: 24px;
+      }
+      .limit-pill {
+        font-size: 15px;
+        height: 26px;
+      }
+      .grid { grid-template-columns: 1fr; }
+      .section h1 { font-size: 32px; }
+      .section h2 { font-size: 25px; }
+    }
+    .sample-card .primary-cta {
+      gap: 8px;
+      font-size: 24px;
+      line-height: 34px;
+      padding: 0 10px;
+    }
+    .sample-card .limit-pill {
+      height: 26px;
+      font-size: 15px;
+      padding: 0 7px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="module-stage">
+      <div class="campaign-band" aria-label="source-sized newcomer module preview">
+        <div class="newcomer-card">
+          <div class="title-row">
+            <div class="title-asset" aria-label="新人低至0.01元">
+              <div class="title-icon" aria-hidden="true"></div>
+              <div class="title-wordmark" aria-hidden="true"></div>
+            </div>
+            <div class="countdown" aria-label="仅剩 06:47:32.5">
+              <span class="countdown-label">仅剩</span>
+              <span class="timer-box">06</span><span class="timer-sep">:</span>
+              <span class="timer-box">47</span><span class="timer-sep">:</span>
+              <span class="timer-box">32</span><span class="timer-sep">.</span>
+              <span class="timer-box ms">5</span>
+            </div>
+          </div>
+          <div class="product-rail">
+            <div class="rail-track">
+              <article class="product-card">
+                <img src="https://img.pddpic.com/gaudit-image/2026-04-12/927ad547211f65d3e017fdab94fb9531.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp" alt="subsidized paper product" />
+                <div class="subsidy-ribbon">已补3元</div>
+                <div class="product-title">纸品补贴商品</div>
+                <div class="price-row"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.2</span></div>
+              </article>
+              <article class="product-card">
+                <img src="https://img.pddpic.com/gaudit-image/2026-06-04/ee41a6e98f002d2905ad9e8ed76a3362.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp" alt="subsidized glass cup product" />
+                <div class="subsidy-ribbon">已补3元</div>
+                <div class="product-title">玻璃杯补贴商品</div>
+                <div class="price-row"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.01</span></div>
+              </article>
+              <article class="product-card">
+                <img src="https://img.pddpic.com/gaudit-image/2026-06-03/8b5d6a78c126c6c772585db67801bd7b.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp" alt="subsidized rope product" />
+                <div class="subsidy-ribbon">已补3元</div>
+                <div class="product-title">绳类补贴品</div>
+                <div class="price-row"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.01</span></div>
+              </article>
+              <article class="product-card">
+                <img src="https://img.pddpic.com/gaudit-image/2026-06-04/1f0c2d320c0635182b1b43d00745ab28.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp" alt="subsidized tissue product" />
+                <div class="subsidy-ribbon">已补3元</div>
+                <div class="product-title">纸巾补贴商品</div>
+                <div class="price-row"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.2</span></div>
+              </article>
+              <div class="more-card">查看更多</div>
+            </div>
+          </div>
+          <div class="cta-wrap">
+            <button class="primary-cta" type="button"><span>立即抢购</span><span class="limit-pill">仅限一次</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="analysis">
+      <nav class="analysis-nav">
+        <strong>拼多多新人 0.01 元模块设计系统</strong>
+        <div class="analysis-nav-links">
+          <a href="#colors" class="active">Colors</a>
+          <a href="#typography">Typography</a>
+          <a href="#components">Components</a>
+          <a href="#responsive">Responsive</a>
+          <a href="#known-gaps">Known Gaps</a>
+        </div>
+      </nav>
+
+      <section class="section" id="overview">
+        <div class="section-label">00 - System Preview</div>
+        <h1>红底、白卡、倒计时、横向补贴货架</h1>
+        <p>左侧是按源尺寸重建的新人补贴模块。标题和补贴条使用源图片资产；CTA、倒计时、商品卡和价格使用实测 CSS 规则。</p>
+      </section>
+
+      <section class="section" id="colors">
+        <div class="section-label">01 - Color Palette</div>
+        <h2>颜色靠高压促销分工</h2>
+        <div class="grid">
+          <div class="swatch"><div class="swatch-color" style="background:#e63e3e"></div><div class="swatch-meta">primary / canvas-red<br>#e63e3e</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:linear-gradient(90deg,#ff542e,#ff1808)"></div><div class="swatch-meta">action gradient<br>#ff542e -> #ff1808</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ef1407"></div><div class="swatch-meta">price-red<br>#ef1407</div></div>
+          <div class="swatch"><div class="swatch-color" style="background:#ffffff"></div><div class="swatch-meta">surface-card<br>#ffffff</div></div>
+        </div>
+      </section>
+
+      <section class="section" id="typography">
+        <div class="section-label">02 - Typography Scale</div>
+        <h2>文字不是平均用力，转化越强越大</h2>
+        <div class="sample-card">
+          <div class="type-row"><strong style="font-size:29.0133px;line-height:43.52px;color:#fff;background:linear-gradient(90deg,#ff542e,#ff1808);border-radius:34.1333px;padding:8px 22px;">立即抢购</strong><p>CTA: 29.0133px / 600 / 43.52px。</p></div>
+          <div class="type-row"><span style="color:#e02e24;font-size:20.48px;">补贴价</span><span style="color:#ef1407;font-size:34.1333px;font-weight:600;">￥0</span><span style="color:#ef1407;font-size:23.8933px;font-weight:600;">.01</span><p>Price: label, integer, decimal use segmented sizes.</p></div>
+          <div class="type-row"><span style="font-size:22.1867px;line-height:32.4267px;">商品标题单行裁切</span><p>Product title: 22.1867px / 400 / clipped one line.</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="components">
+        <div class="section-label">03 - Component System</div>
+        <h2>八个关键组件</h2>
+        <div class="grid">
+          <div class="sample-card"><div class="section-label">03A - Title Asset</div><div class="title-asset"><div class="title-icon"></div><div class="title-wordmark"></div></div><p>标题是源图片资产，不是普通文本。</p></div>
+          <div class="sample-card"><div class="section-label">03B - Countdown</div><div class="countdown"><span class="countdown-label">仅剩</span><span class="timer-box">06</span><span class="timer-sep">:</span><span class="timer-box">47</span><span class="timer-sep">:</span><span class="timer-box">32</span><span class="timer-sep">.</span><span class="timer-box ms">5</span></div><p>数字胶囊使用红橙渐变，动态刷新。</p></div>
+          <div class="sample-card"><div class="section-label">03C - Product Rail</div><div class="mini-rail"><div class="rail-track"><article class="product-card"><img src="https://img.pddpic.com/gaudit-image/2026-04-12/927ad547211f65d3e017fdab94fb9531.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp" alt="mini product" /><div class="subsidy-ribbon">已补3元</div><div class="product-title">纸品补贴商品</div><div class="price-row"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.2</span></div></article><article class="product-card"><img src="https://img.pddpic.com/gaudit-image/2026-06-04/ee41a6e98f002d2905ad9e8ed76a3362.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp" alt="mini product" /><div class="subsidy-ribbon">已补3元</div><div class="product-title">玻璃杯补贴商品</div><div class="price-row"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.01</span></div></article></div></div><p>源轨道是 599px 视窗和 1934px 内容。</p></div>
+          <div class="sample-card"><div class="section-label">03D - Subsidy Ribbon</div><div class="subsidy-ribbon" style="width:174px;">已补3元</div><p>图片背景条 + 箭头，不是普通标签。</p></div>
+          <div class="sample-card"><div class="section-label">03E - Price Row</div><div class="price-row" style="justify-content:flex-start;"><span class="price-label">补贴价</span><span class="currency">￥</span><span class="price-main">0</span><span class="price-decimal">.01</span></div><p>整数更大，小数更小，价格视觉压过商品名。</p></div>
+          <div class="sample-card"><div class="section-label">03F - Primary CTA</div><button class="primary-cta" type="button" style="width:100%;"><span>立即抢购</span><span class="limit-pill">仅限一次</span></button><p>512x68 源按钮按比例复用，文本不能溢出。</p></div>
+          <div class="sample-card"><div class="section-label">03G - View More</div><div class="more-card">查看更多</div><p>竖向小卡出现在横轨末端。</p></div>
+          <div class="sample-card"><div class="section-label">03H - Metrics</div><div class="metric-list"><span><strong>card:</strong> 613x451</span><span><strong>rail:</strong> 599x276 / scrollWidth 1934</span><span><strong>cta:</strong> 512x68</span><span><strong>product:</strong> 174x276</span></div></div>
+        </div>
+      </section>
+
+      <section class="section" id="responsive">
+        <div class="section-label">04 - Responsive Behavior</div>
+        <h2>保持移动活动宽度，向下缩放</h2>
+        <p>源页面在桌面中仍以移动页面宽度居中展示。复刻时应保留 640px 活动带和横轨裁切关系，在窄屏通过比例缩小，而不是把商品改成普通网格。</p>
+      </section>
+
+      <section class="section" id="known-gaps">
+        <div class="section-label">05 - Known Gaps</div>
+        <h2>已知边界</h2>
+        <ul class="gap-list">
+          <li>没有点击“立即抢购”、商品卡或“查看更多”，避免产生账号、推荐、购买相关副作用。</li>
+          <li>鼠标拖动商品轨道没有位移；真实触摸滑动未验证。</li>
+          <li>商品内容会随库存、用户和时间变化；展示页只固定模块结构。</li>
+          <li>页面 URL 的分享参数和页面参数没有写入文档。</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <script>
+    const links = Array.from(document.querySelectorAll(".analysis-nav a"));
+    function setActive(hash) {
+      const next = hash || "#colors";
+      links.forEach((link) => {
+        const on = link.getAttribute("href") === next;
+        link.classList.toggle("active", on);
+        if (on) link.setAttribute("aria-current", "true");
+        else link.removeAttribute("aria-current");
+      });
+    }
+    function setFromHash() { setActive(window.location.hash || "#colors"); }
+    links.forEach((link) => link.addEventListener("click", () => {
+      const next = link.getAttribute("href");
+      if (next && next.startsWith("#")) setActive(next);
+      window.setTimeout(setFromHash, 0);
+    }));
+    window.addEventListener("hashchange", setFromHash);
+    setFromHash();
+
+    const countdowns = Array.from(document.querySelectorAll(".countdown"));
+    const initialCountdownMs = ((6 * 60 * 60) + (47 * 60) + 32) * 1000 + 500;
+    let countdownEndAt = Date.now() + initialCountdownMs;
+
+    function pad2(value) {
+      return String(value).padStart(2, "0");
+    }
+
+    function getCountdownParts() {
+      const remaining = Math.max(0, countdownEndAt - Date.now());
+      const totalTenths = Math.floor(remaining / 100);
+      const tenths = totalTenths % 10;
+      const totalSeconds = Math.floor(totalTenths / 10);
+      const seconds = totalSeconds % 60;
+      const totalMinutes = Math.floor(totalSeconds / 60);
+      const minutes = totalMinutes % 60;
+      const hours = Math.floor(totalMinutes / 60);
+      return [pad2(hours), pad2(minutes), pad2(seconds), String(tenths)];
+    }
+
+    function updateCountdowns(isInitial) {
+      const parts = getCountdownParts();
+      const label = `仅剩 ${parts[0]}:${parts[1]}:${parts[2]}.${parts[3]}`;
+      countdowns.forEach((countdown) => {
+        const boxes = Array.from(countdown.querySelectorAll(".timer-box"));
+        boxes.forEach((box, index) => {
+          const next = parts[index];
+          if (box.textContent !== next) {
+            box.textContent = next;
+            if (!isInitial) {
+              box.classList.remove("timer-tick");
+              void box.offsetWidth;
+              box.classList.add("timer-tick");
+            }
+          }
+        });
+        countdown.setAttribute("aria-label", label);
+      });
+    }
+
+    updateCountdowns(true);
+    window.setInterval(() => updateCountdowns(false), 100);
+  </script>
+</body>
+</html>

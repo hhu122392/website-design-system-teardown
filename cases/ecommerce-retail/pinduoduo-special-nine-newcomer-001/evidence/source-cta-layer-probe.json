@@ -1,0 +1,474 @@
+{
+  "around": [
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "_2nh_HU-D",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "relative",
+      "radius": "0px",
+      "rect": {
+        "h": 68,
+        "w": 512,
+        "x": 359,
+        "y": 500
+      },
+      "tag": "div",
+      "text": "立即抢购\n仅限一次"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "url(\"https://promotion.pddpic.com/promo/promo/lower/ea92af71-cbed-4fd7-8275-8688442f601e.png.slim.png?imageView2/2/w/1300/q/70/format/webp\")",
+      "boxShadow": "none",
+      "cls": "ia0gbqkl",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "absolute",
+      "radius": "0px",
+      "rect": {
+        "h": 102,
+        "w": 546,
+        "x": 342,
+        "y": 490
+      },
+      "tag": "div",
+      "text": ""
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "linear-gradient(90deg, rgb(255, 84, 46), rgb(255, 24, 8))",
+      "boxShadow": "rgba(253, 99, 99, 0.3) 0px 3.41333px 17.0667px 0px",
+      "cls": "_1JxG4k4V",
+      "color": "rgb(255, 255, 255)",
+      "display": "flex",
+      "fs": "29.0133px",
+      "fw": "600",
+      "lh": "43.52px",
+      "overflow": "visible",
+      "position": "relative",
+      "radius": "34.1333px",
+      "rect": {
+        "h": 68,
+        "w": 512,
+        "x": 359,
+        "y": 500
+      },
+      "tag": "div",
+      "text": "立即抢购\n仅限一次"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "url(\"https://funimg.pddpic.com/lego/9k9/92b5faf2-0162-41a4-8259-02667c24384e.png.slim.png?imageView2/2/w/1300/q/70/format/webp\")",
+      "boxShadow": "none",
+      "cls": "_4PHewR2B",
+      "color": "rgb(157, 58, 0)",
+      "display": "block",
+      "fs": "18.7733px",
+      "fw": "500",
+      "lh": "28.16px",
+      "overflow": "visible",
+      "position": "static",
+      "radius": "0px",
+      "rect": {
+        "h": 27,
+        "w": 92,
+        "x": 665,
+        "y": 521
+      },
+      "tag": "div",
+      "text": "仅限一次"
+    }
+  ],
+  "chain": [
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "linear-gradient(90deg, rgb(255, 84, 46), rgb(255, 24, 8))",
+      "boxShadow": "rgba(253, 99, 99, 0.3) 0px 3.41333px 17.0667px 0px",
+      "cls": "_1JxG4k4V",
+      "color": "rgb(255, 255, 255)",
+      "display": "flex",
+      "fs": "29.0133px",
+      "fw": "600",
+      "lh": "43.52px",
+      "overflow": "visible",
+      "position": "relative",
+      "radius": "34.1333px",
+      "rect": {
+        "h": 68,
+        "w": 512,
+        "x": 359,
+        "y": 500
+      },
+      "tag": "div",
+      "text": "立即抢购\n仅限一次"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "_2nh_HU-D",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "relative",
+      "radius": "0px",
+      "rect": {
+        "h": 68,
+        "w": 512,
+        "x": 359,
+        "y": 500
+      },
+      "tag": "div",
+      "text": "立即抢购\n仅限一次"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgb(255, 255, 255)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "_3QgDWmfk",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "static",
+      "radius": "13.6533px",
+      "rect": {
+        "h": 451,
+        "w": 613,
+        "x": 309,
+        "y": 138
+      },
+      "tag": "div",
+      "text": "[redacted long visible page text; style and rect metrics retained]"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgb(230, 62, 62)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "qC6TNYA1",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "relative",
+      "radius": "0px",
+      "rect": {
+        "h": 471,
+        "w": 640,
+        "x": 296,
+        "y": 138
+      },
+      "tag": "div",
+      "text": "[redacted long visible page text; style and rect metrics retained]"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "wrapper _1tblGkoo",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "static",
+      "radius": "0px",
+      "rect": {
+        "h": 9986,
+        "w": 640,
+        "x": 296,
+        "y": 138
+      },
+      "tag": "div",
+      "text": "[redacted long visible page text; style and rect metrics retained]"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgb(242, 242, 242)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "jsx-1870947002 wrapper",
+      "color": "rgb(102, 102, 102)",
+      "display": "flex",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "static",
+      "radius": "0px",
+      "rect": {
+        "h": 10125,
+        "w": 640,
+        "x": 296,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "[redacted long visible page text; style and rect metrics retained]"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "static",
+      "radius": "0px",
+      "rect": {
+        "h": 10125,
+        "w": 640,
+        "x": 296,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "[redacted long visible page text; style and rect metrics retained]"
+    },
+    {
+      "after": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "before": {
+        "bg": "rgba(0, 0, 0, 0)",
+        "bgImg": "none",
+        "boxShadow": "none",
+        "content": "none",
+        "radius": "0px"
+      },
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "cls": "",
+      "color": "rgb(102, 102, 102)",
+      "display": "block",
+      "fs": "12px",
+      "fw": "400",
+      "lh": "18px",
+      "overflow": "visible",
+      "position": "static",
+      "radius": "0px",
+      "rect": {
+        "h": 10125,
+        "w": 640,
+        "x": 296,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "[redacted long visible page text; style and rect metrics retained]"
+    }
+  ],
+  "elementAtCenter": {
+    "after": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "content": "none",
+      "radius": "0px"
+    },
+    "before": {
+      "bg": "rgba(0, 0, 0, 0)",
+      "bgImg": "none",
+      "boxShadow": "none",
+      "content": "none",
+      "radius": "0px"
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImg": "linear-gradient(90deg, rgb(255, 84, 46), rgb(255, 24, 8))",
+    "boxShadow": "rgba(253, 99, 99, 0.3) 0px 3.41333px 17.0667px 0px",
+    "cls": "_1JxG4k4V",
+    "color": "rgb(255, 255, 255)",
+    "display": "flex",
+    "fs": "29.0133px",
+    "fw": "600",
+    "lh": "43.52px",
+    "overflow": "visible",
+    "position": "relative",
+    "radius": "34.1333px",
+    "rect": {
+      "h": 68,
+      "w": 512,
+      "x": 359,
+      "y": 500
+    },
+    "tag": "div",
+    "text": "立即抢购\n仅限一次"
+  }
+}

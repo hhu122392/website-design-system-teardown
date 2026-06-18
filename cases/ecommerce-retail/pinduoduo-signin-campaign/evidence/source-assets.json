@@ -1,0 +1,1027 @@
+[
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "Ao3KQ cartoon-widgets-search-icon",
+        "rect": {
+          "h": 15,
+          "w": 16,
+          "x": 176,
+          "y": 47
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/cartoon_activity/fruiter/cartoon_search_icon.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "jsx-3783852350 jsx-681154363 trigger-button",
+        "rect": {
+          "h": 20,
+          "w": 20,
+          "x": 350,
+          "y": 45
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/new_daily_home_search/right_icon.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " a6dFU",
+        "rect": {
+          "h": 151,
+          "w": 98,
+          "x": 277,
+          "y": 19
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/contentBgTag.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "YxvZR",
+        "rect": {
+          "h": 14,
+          "w": 14,
+          "x": 31,
+          "y": 83
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://avatar3.pddpic.com/a/Q0RRWW4vaUdwT01nYWtEamptVUJHMGo1OU0xcDRDZzVTdz09djA0-1778360332?imageMogr2/thumbnail/100x"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " DyUCk",
+        "rect": {
+          "h": 25,
+          "w": 27,
+          "x": 62,
+          "y": 116
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/cashWeChatIcon.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " V_m8_",
+        "rect": {
+          "h": 11,
+          "w": 6,
+          "x": 301,
+          "y": 122
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/cashArrow.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " aWyLk",
+        "rect": {
+          "h": 42,
+          "w": 216,
+          "x": 87,
+          "y": 150
+        },
+        "text": "每日抽 提现"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/daily_home/activityDespTitleBg.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " J4_mS",
+        "rect": {
+          "h": 9,
+          "w": 9,
+          "x": 131,
+          "y": 164
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " oQhxd",
+        "rect": {
+          "h": 9,
+          "w": 9,
+          "x": 250,
+          "y": 164
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/activityDespTitleStar.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " mVkMS",
+        "rect": {
+          "h": 17,
+          "w": 18,
+          "x": 194,
+          "y": 161
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/activityDespTitleWeChatIcon.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " kIfOq",
+        "rect": {
+          "h": 212,
+          "w": 361,
+          "x": 15,
+          "y": 193
+        },
+        "text": "全额提现 分天打款 剩3992份 6 元 最高 微信打款 9 元 满90元可用 全场通用 惊喜奖励 8 元 分天 微信打款 3 元 最高 微信打款"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/mainPartMachineBg.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "ftkWJ",
+        "rect": {
+          "h": 82,
+          "w": 89,
+          "x": 50,
+          "y": 212
+        },
+        "text": "全额提现 分天打款 剩3992份"
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "ftkWJ",
+        "rect": {
+          "h": 82,
+          "w": 89,
+          "x": 150,
+          "y": 212
+        },
+        "text": "6 元 最高 微信打款"
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "ftkWJ",
+        "rect": {
+          "h": 82,
+          "w": 89,
+          "x": 50,
+          "y": 305
+        },
+        "text": "惊喜奖励"
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "ftkWJ",
+        "rect": {
+          "h": 82,
+          "w": 89,
+          "x": 150,
+          "y": 305
+        },
+        "text": "8 元 分天 微信打款"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/new_daily/lottery_reward_item.png.slim.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "ftkWJ dYzhL",
+        "rect": {
+          "h": 82,
+          "w": 89,
+          "x": 250,
+          "y": 212
+        },
+        "text": "9 元 满90元可用 全场通用"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/new_daily/platform_coupon.png.slim.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "MNI_7",
+        "rect": {
+          "h": 26,
+          "w": 25,
+          "x": 83,
+          "y": 318
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/new_daily/surprise_reward.png.slim.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " oci0y",
+        "rect": {
+          "h": 35,
+          "w": 66,
+          "x": 25,
+          "y": 427
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/btnLeftArrow.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " yNLim",
+        "rect": {
+          "h": 67,
+          "w": 239,
+          "x": 75,
+          "y": 412
+        },
+        "text": "立即抽提现 (可抽3次)"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/daily_home_main/activityMainBtn.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": " lQers",
+        "rect": {
+          "h": 35,
+          "w": 67,
+          "x": 298,
+          "y": 427
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/daily_home/btnRightArrow.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "F06P6",
+        "rect": {
+          "h": 104,
+          "w": 104,
+          "x": 228,
+          "y": 427
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/main_btn_handle_finger.apng"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "className": "jsx-3017432210 open-packet-mission-body bg-base",
+        "rect": {
+          "h": 44,
+          "w": 71,
+          "x": 16,
+          "y": 532
+        },
+        "text": "20 元 最多"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/a7fca165-4808-44a8-90cc-e6a63a25a42e.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "className": "jsx-3017432210 open-packet-mission-body bg-base",
+        "rect": {
+          "h": 44,
+          "w": 71,
+          "x": 112,
+          "y": 532
+        },
+        "text": "2 元"
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily/source/daily_money.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "className": "jsx-3017432210 open-packet-mission-body bg-base",
+        "rect": {
+          "h": 44,
+          "w": 71,
+          "x": 207,
+          "y": 532
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/daily_home/ManekiNekoCat.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "contain",
+        "className": "jsx-3017432210 open-packet-mission-body bg-base",
+        "rect": {
+          "h": 44,
+          "w": 71,
+          "x": 303,
+          "y": 532
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/daily_home/ExchangeZone.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "jsx-3921242146 jsx-3911136615 wechat __global_bg",
+        "rect": {
+          "h": 15,
+          "w": 16,
+          "x": 96,
+          "y": 936
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "jsx-3921242146 jsx-3911136615 wechat __global_bg",
+        "rect": {
+          "h": 15,
+          "w": 16,
+          "x": 286,
+          "y": 936
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "jsx-3921242146 jsx-3911136615 wechat __global_bg",
+        "rect": {
+          "h": 15,
+          "w": 16,
+          "x": 96,
+          "y": 1242
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "jsx-3921242146 jsx-3911136615 wechat __global_bg",
+        "rect": {
+          "h": 15,
+          "w": 16,
+          "x": 286,
+          "y": 1242
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg.pddpic.com/common/daily_bonus/lottery_order/wechat1.png.slim.png?imageMogr2/%7CimageView2/q/50/format/webp"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "Vzzod cartoon-widgets-loading-spinner",
+        "rect": {
+          "h": 33,
+          "w": 33,
+          "x": 119,
+          "y": 3734
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://pinduoduoimg.yangkeduo.com/cartoon_activity/fruiter/cartoon-widgets-loading.png"
+  },
+  {
+    "roles": [
+      "background-image"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "50% 50%",
+        "backgroundRepeat": "no-repeat",
+        "backgroundSize": "100% 100%",
+        "className": "XLEZe cartoon-widgets-gotop",
+        "rect": {
+          "h": 44,
+          "w": 44,
+          "x": 322,
+          "y": 867
+        },
+        "text": "顶部"
+      }
+    ],
+    "url": "https://pinduoduoimg.yangkeduo.com/cartoon_activity/fruiter/cartoon-widgets-gotop.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 0,
+          "y": 661
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2026-01-09/58ccfab9-c6ff-4f54-bd38-4ca46938b60f.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 37,
+          "x": 8,
+          "y": 863
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 37,
+          "x": 198,
+          "y": 863
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 37,
+          "x": 198,
+          "y": 1476
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 37,
+          "x": 8,
+          "y": 1783
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg-1.pddpic.com/hot_friends/4e81617e-ad3b-4e0d-a431-a8d4061a5ddf.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 55,
+          "x": 48,
+          "y": 863
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/aid-image/brand_black_label_combine/8ef520145c664b589d70613c5547955d.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 190,
+          "y": 661
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2025-11-10/7cf76a2c-5ac1-4fc3-a42f-100f57d46cb9.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 55,
+          "x": 237,
+          "y": 863
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/aid-image/brand_black_label_combine/7a1c78e44238435485d9006f1f75f67a.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 0,
+          "y": 968
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2025-12-25/5a40f40c-7eae-451c-98c6-187c01763cbd.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 190,
+          "y": 968
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2026-04-27/8e7f3396-ab5d-4514-b019-7a94ade8945c.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 0,
+          "y": 1275
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-material-img/2025-08-12/f0b42762-ca08-4e3a-9b93-a0720ca66633.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 37,
+          "x": 8,
+          "y": 1476
+        },
+        "text": ""
+      },
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 37,
+          "x": 198,
+          "y": 2090
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://funimg-1.pddpic.com/hot_friends/1753bf07-5378-4f13-a373-4b48c2265631.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 27,
+          "x": 48,
+          "y": 1476
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://promotion-1.pddpic.com/promo/2019-11-19/brand.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 190,
+          "y": 1275
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2026-06-15/ab86d752-0baf-4cbd-b75b-42a278385775.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 0,
+          "y": 1581
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2026-05-21/7b8c9392-6288-4824-b6cb-5c9ed4a8ec77.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 15,
+          "w": 67,
+          "x": 48,
+          "y": 1783
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/aid-image/brand_black_label_combine/801c5e85f640412d9da0288e684dd17b.png"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 190,
+          "y": 1581
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/open-gw/2026-01-22/45ec31c8-91f5-4f76-8dc6-aeda2f961a5f.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 0,
+          "y": 1888
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-material-img/2025-10-09/1163bbcd-7e4f-422e-ac6b-e70888e7048b.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 190,
+          "y": 1888
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-goods-image/2026-05-16/fa664f21-6537-489c-a335-9ffe2b4ebe9d.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 0,
+          "y": 2195
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-material-img/2026-01-23/f49ebccb-a008-4a08-a897-7d2087008d43.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  },
+  {
+    "roles": [
+      "img"
+    ],
+    "samples": [
+      {
+        "backgroundPosition": "0% 0%",
+        "backgroundRepeat": "repeat",
+        "backgroundSize": "auto",
+        "className": "pdd-lazy-image loaded",
+        "rect": {
+          "h": 193,
+          "w": 193,
+          "x": 190,
+          "y": 2195
+        },
+        "text": ""
+      }
+    ],
+    "url": "https://img-2.pddpic.com/mms-material-img/2025-07-30/17a80ddd-f137-43c9-aa26-58593a980dc3.jpeg.a.jpeg?imageView2/2/w/1300/q/80/format/webp"
+  }
+]

@@ -1,0 +1,252 @@
+{
+  "verificationTool": "Playwright Chromium fallback after Browser plugin tab attach timed out",
+  "previewUrl": "http://127.0.0.1:8787/pinduoduo-special-nine-newcomer-001-teardown-20260618/design-system-analysis/pinduoduo-special-nine-newcomer-001-preview.html",
+  "generatedAt": "2026-06-18T09:26:18.142Z",
+  "desktopImages": [
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-04-12/927ad547211f65d3e017fdab94fb9531.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-04/ee41a6e98f002d2905ad9e8ed76a3362.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-03/8b5d6a78c126c6c772585db67801bd7b.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-04/1f0c2d320c0635182b1b43d00745ab28.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-04-12/927ad547211f65d3e017fdab94fb9531.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-04/ee41a6e98f002d2905ad9e8ed76a3362.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    }
+  ],
+  "desktopBeforeClick": {
+    "label": "desktop-1246x912-before-click",
+    "url": "http://127.0.0.1:8787/pinduoduo-special-nine-newcomer-001-teardown-20260618/design-system-analysis/pinduoduo-special-nine-newcomer-001-preview.html#components",
+    "viewport": {
+      "width": 1246,
+      "height": 912
+    },
+    "documentWidth": 1246,
+    "bodyWidth": 1246,
+    "noHorizontalOverflow": true,
+    "nonBlank": true,
+    "brokenImages": [],
+    "pendingImages": [],
+    "imageCount": 6,
+    "compactOverflow": [],
+    "componentCards": 9,
+    "sections": [
+      "overview",
+      "colors",
+      "typography",
+      "components",
+      "responsive",
+      "known-gaps"
+    ],
+    "activeLinks": [
+      "#components"
+    ],
+    "fakeClasses": [],
+    "oneLetterBadges": [],
+    "campaignBandRect": {
+      "x": 20,
+      "y": 24,
+      "width": 640,
+      "height": 474.9375
+    },
+    "stageRect": {
+      "x": 0,
+      "y": 0,
+      "width": 680,
+      "height": 912
+    }
+  },
+  "navClick": {
+    "responsiveCount": 1,
+    "afterHash": "#responsive",
+    "activeLinks": [
+      "#responsive"
+    ]
+  },
+  "desktopAfterClick": {
+    "label": "desktop-1246x912-after-click",
+    "url": "http://127.0.0.1:8787/pinduoduo-special-nine-newcomer-001-teardown-20260618/design-system-analysis/pinduoduo-special-nine-newcomer-001-preview.html#responsive",
+    "viewport": {
+      "width": 1246,
+      "height": 912
+    },
+    "documentWidth": 1246,
+    "bodyWidth": 1246,
+    "noHorizontalOverflow": true,
+    "nonBlank": true,
+    "brokenImages": [],
+    "pendingImages": [],
+    "imageCount": 6,
+    "compactOverflow": [],
+    "componentCards": 9,
+    "sections": [
+      "overview",
+      "colors",
+      "typography",
+      "components",
+      "responsive",
+      "known-gaps"
+    ],
+    "activeLinks": [
+      "#responsive"
+    ],
+    "fakeClasses": [],
+    "oneLetterBadges": [],
+    "campaignBandRect": {
+      "x": 20,
+      "y": 24,
+      "width": 640,
+      "height": 474.9375
+    },
+    "stageRect": {
+      "x": 0,
+      "y": 0,
+      "width": 680,
+      "height": 912
+    }
+  },
+  "mobileImages": [
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-04-12/927ad547211f65d3e017fdab94fb9531.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-04/ee41a6e98f002d2905ad9e8ed76a3362.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-03/8b5d6a78c126c6c772585db67801bd7b.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-04/1f0c2d320c0635182b1b43d00745ab28.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-04-12/927ad547211f65d3e017fdab94fb9531.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    },
+    {
+      "src": "https://img.pddpic.com/gaudit-image/2026-06-04/ee41a6e98f002d2905ad9e8ed76a3362.jpeg?imageMogr2/thumbnail/400x%7CimageView2/2/w/270/q/80/format/webp",
+      "complete": true,
+      "naturalWidth": 270,
+      "naturalHeight": 270
+    }
+  ],
+  "mobile": {
+    "label": "mobile-390x844-final",
+    "url": "http://127.0.0.1:8787/pinduoduo-special-nine-newcomer-001-teardown-20260618/design-system-analysis/pinduoduo-special-nine-newcomer-001-preview.html#components",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentWidth": 390,
+    "bodyWidth": 390,
+    "noHorizontalOverflow": true,
+    "nonBlank": true,
+    "brokenImages": [],
+    "pendingImages": [],
+    "imageCount": 6,
+    "compactOverflow": [],
+    "componentCards": 9,
+    "sections": [
+      "overview",
+      "colors",
+      "typography",
+      "components",
+      "responsive",
+      "known-gaps"
+    ],
+    "activeLinks": [
+      "#components"
+    ],
+    "fakeClasses": [],
+    "oneLetterBadges": [],
+    "campaignBandRect": {
+      "x": 0,
+      "y": -2175,
+      "width": 390,
+      "height": 393
+    },
+    "stageRect": {
+      "x": 0,
+      "y": -2175,
+      "width": 390,
+      "height": 393
+    }
+  },
+  "screenshots": {
+    "desktop": "C:\\Users\\zhoua\\Desktop\\主题拆解SKILL\\pinduoduo-special-nine-newcomer-001-teardown-20260618\\screenshots\\07-preview-desktop-final.png",
+    "mobile": "C:\\Users\\zhoua\\Desktop\\主题拆解SKILL\\pinduoduo-special-nine-newcomer-001-teardown-20260618\\screenshots\\06-preview-mobile-390x844.png"
+  },
+  "mobileTop": {
+    "label": "mobile-390x844-top-target-visible",
+    "url": "http://127.0.0.1:8787/pinduoduo-special-nine-newcomer-001-teardown-20260618/design-system-analysis/pinduoduo-special-nine-newcomer-001-preview.html",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentWidth": 390,
+    "bodyWidth": 390,
+    "noHorizontalOverflow": true,
+    "nonBlank": true,
+    "activeLinks": [
+      "#colors"
+    ],
+    "campaignBandRect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 393
+    },
+    "newcomerCardRect": {
+      "x": 8,
+      "y": 16,
+      "width": 374,
+      "height": 359
+    },
+    "targetComponentVisible": true,
+    "brokenImages": [],
+    "pendingImages": [],
+    "imageCount": 6
+  },
+  "notes": [
+    "Mobile final screenshot refreshed at top of page so the target campaign module is visible."
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "desktop": {
+    "url": "http://127.0.0.1:8787/pinduoduo-signin-teardown-20260618/design-system-analysis/pinduoduo-signin-campaign-preview.html?audit=desktop-1280x900-1781771068048#components",
+    "title": "Pinduoduo Sign-in Campaign Design System Preview",
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "documentWidth": 1280,
+    "clientWidth": 1280,
+    "bodyScrollWidth": 1280,
+    "noHorizontalOverflow": true,
+    "nonBlank": true,
+    "imageCount": 2,
+    "brokenImages": [],
+    "compactOverflow": [],
+    "compactTextCount": 10,
+    "rewardSubs": [],
+    "rewardSubCount": 0,
+    "rewardSubsUniformBottom": true,
+    "rewardBottoms": [],
+    "sections": [
+      {
+        "id": "overview",
+        "top": -1085,
+        "height": 217
+      },
+      {
+        "id": "colors",
+        "top": -868,
+        "height": 372
+      },
+      {
+        "id": "typography",
+        "top": -495,
+        "height": 496
+      },
+      {
+        "id": "components",
+        "top": 0,
+        "height": 821
+      },
+      {
+        "id": "responsive",
+        "top": 821,
+        "height": 240
+      },
+      {
+        "id": "known-gaps",
+        "top": 1061,
+        "height": 217
+      }
+    ],
+    "componentSections": 4,
+    "analysisSections": 6,
+    "activeLinks": [
+      "#components"
+    ],
+    "fakeClasses": []
+  },
+  "mobile": {
+    "url": "http://127.0.0.1:8787/pinduoduo-signin-teardown-20260618/design-system-analysis/pinduoduo-signin-campaign-preview.html?audit=mobile-390x844-1781771068857#components",
+    "title": "Pinduoduo Sign-in Campaign Design System Preview",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentWidth": 390,
+    "clientWidth": 390,
+    "bodyScrollWidth": 390,
+    "noHorizontalOverflow": true,
+    "nonBlank": true,
+    "imageCount": 2,
+    "brokenImages": [],
+    "compactOverflow": [],
+    "compactTextCount": 10,
+    "rewardSubs": [],
+    "rewardSubCount": 0,
+    "rewardSubsUniformBottom": true,
+    "rewardBottoms": [],
+    "sections": [
+      {
+        "id": "overview",
+        "top": -1907,
+        "height": 281
+      },
+      {
+        "id": "colors",
+        "top": -1626,
+        "height": 1080
+      },
+      {
+        "id": "typography",
+        "top": -546,
+        "height": 546
+      },
+      {
+        "id": "components",
+        "top": 0,
+        "height": 1183
+      },
+      {
+        "id": "responsive",
+        "top": 1183,
+        "height": 326
+      },
+      {
+        "id": "known-gaps",
+        "top": 1508,
+        "height": 281
+      }
+    ],
+    "componentSections": 4,
+    "analysisSections": 6,
+    "activeLinks": [
+      "#components"
+    ],
+    "fakeClasses": []
+  },
+  "interaction": {
+    "componentsCount": 1,
+    "responsiveCount": 1,
+    "afterComponents": {
+      "hash": "#components",
+      "active": [
+        "#components"
+      ]
+    },
+    "afterResponsive": {
+      "hash": "#responsive",
+      "active": [
+        "#responsive"
+      ],
+      "responsiveTop": 238,
+      "noHorizontalOverflow": true
+    },
+    "status": "pass"
+  }
+}

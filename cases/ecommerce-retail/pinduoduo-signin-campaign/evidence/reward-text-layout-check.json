@@ -1,0 +1,119 @@
+{
+  "cells": [
+    {
+      "index": 0,
+      "primary": {
+        "className": "reward-main",
+        "gapToSub": 20
+      },
+      "sub": {
+        "bottomOffset": 11,
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "overflowX": false,
+        "overflowY": false,
+        "text": "分天打款"
+      },
+      "text": "剩3992份 全额提现 分天打款"
+    },
+    {
+      "index": 1,
+      "primary": {
+        "className": "reward-amount",
+        "gapToSub": 9
+      },
+      "sub": {
+        "bottomOffset": 11,
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "overflowX": false,
+        "overflowY": false,
+        "text": "微信打款"
+      },
+      "text": "6元 微信打款"
+    },
+    {
+      "index": 2,
+      "primary": {
+        "className": "reward-amount",
+        "gapToSub": 9
+      },
+      "sub": {
+        "bottomOffset": 11,
+        "color": "rgb(106, 47, 17)",
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "overflowX": false,
+        "overflowY": false,
+        "text": "全场通用"
+      },
+      "text": "9元 全场通用"
+    },
+    {
+      "index": 3,
+      "primary": {
+        "className": "gift-symbol",
+        "gapToSub": 6
+      },
+      "sub": {
+        "bottomOffset": 11,
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "overflowX": false,
+        "overflowY": false,
+        "text": "惊喜奖励"
+      },
+      "text": "惊喜奖励"
+    },
+    {
+      "index": 4,
+      "primary": {
+        "className": "reward-amount",
+        "gapToSub": 9
+      },
+      "sub": {
+        "bottomOffset": 11,
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "overflowX": false,
+        "overflowY": false,
+        "text": "微信打款"
+      },
+      "text": "8元 微信打款"
+    },
+    {
+      "index": 5,
+      "primary": {
+        "className": "reward-amount",
+        "gapToSub": 9
+      },
+      "sub": {
+        "bottomOffset": 11,
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12px",
+        "lineHeight": "14px",
+        "overflowX": false,
+        "overflowY": false,
+        "text": "微信打款"
+      },
+      "text": "3元 微信打款"
+    }
+  ],
+  "noHorizontalOverflow": true,
+  "overflowItems": [],
+  "overlapItems": [],
+  "subBottomOffsets": [
+    11,
+    11,
+    11,
+    11,
+    11,
+    11
+  ],
+  "uniformSubBottom": true,
+  "url": "http://127.0.0.1:8787/pinduoduo-signin-teardown-20260618/design-system-analysis/pinduoduo-signin-campaign-preview.html?v=reward-fix-1#components"
+}

@@ -1,0 +1,36 @@
+{
+  "activeLinks": [
+    "#colors"
+  ],
+  "bodyScrollWidth": 1265,
+  "brokenImages": [],
+  "clientWidth": 1265,
+  "compactOverflow": [],
+  "documentWidth": 1265,
+  "imageCount": 2,
+  "noHorizontalOverflow": true,
+  "nonBlank": true,
+  "title": "Pinduoduo Sign-in Campaign Design System Preview",
+  "url": "http://127.0.0.1:8787/pinduoduo-signin-teardown-20260618/design-system-analysis/pinduoduo-signin-campaign-preview.html",
+  "viewport": {
+    "height": 900,
+    "width": 1280
+  },
+  "visibleSections": [
+    {
+      "height": 217,
+      "id": "overview",
+      "top": 61
+    },
+    {
+      "height": 372,
+      "id": "colors",
+      "top": 278
+    },
+    {
+      "height": 496,
+      "id": "typography",
+      "top": 651
+    }
+  ]
+}
